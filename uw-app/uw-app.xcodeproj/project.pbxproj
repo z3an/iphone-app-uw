@@ -14,7 +14,25 @@
 		4C4EA66B1F64712D007A118E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4EA6691F64712D007A118E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		03B4AA681F6778FD0091F0FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03B4AA631F6778FD0091F0FC /* WatSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A1C857EB1D3CDE7100CA77C7;
+			remoteInfo = WatSwift;
+		};
+		03B4AA6A1F6778FD0091F0FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03B4AA631F6778FD0091F0FC /* WatSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A1C857F41D3CDE7100CA77C7;
+			remoteInfo = WatSwiftTests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		03B4AA631F6778FD0091F0FC /* WatSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WatSwift.xcodeproj; path = "../../../../Downloads/WatSwift-master/WatSwift.xcodeproj"; sourceTree = "<group>"; };
 		4C4EA65D1F64712D007A118E /* uw-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "uw-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4EA6601F64712D007A118E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4EA6621F64712D007A118E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,11 +53,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03B4AA641F6778FD0091F0FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03B4AA691F6778FD0091F0FC /* WatSwift.framework */,
+				03B4AA6B1F6778FD0091F0FC /* WatSwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		4C4EA6541F64712C007A118E = {
 			isa = PBXGroup;
 			children = (
 				4C4EA65F1F64712D007A118E /* uw-app */,
 				4C4EA65E1F64712D007A118E /* Products */,
+				03B4AA631F6778FD0091F0FC /* WatSwift.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,12 +139,35 @@
 			mainGroup = 4C4EA6541F64712C007A118E;
 			productRefGroup = 4C4EA65E1F64712D007A118E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 03B4AA641F6778FD0091F0FC /* Products */;
+					ProjectRef = 03B4AA631F6778FD0091F0FC /* WatSwift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4C4EA65C1F64712D007A118E /* uw-app */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		03B4AA691F6778FD0091F0FC /* WatSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = WatSwift.framework;
+			remoteRef = 03B4AA681F6778FD0091F0FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		03B4AA6B1F6778FD0091F0FC /* WatSwiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = WatSwiftTests.xctest;
+			remoteRef = 03B4AA6A1F6778FD0091F0FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4C4EA65B1F64712D007A118E /* Resources */ = {
@@ -303,6 +354,7 @@
 				4C4EA6711F64712D007A118E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
