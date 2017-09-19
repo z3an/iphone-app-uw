@@ -147,27 +147,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backGround" translatesAutoresizingMaskIntoConstraints="NO" id="0bD-1X-z7R">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pGV-4b-WCI">
-                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qtz-Fk-I4W" userLabel="backButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="417"/>
-                                        <state key="normal" title="Back"/>
-                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Selection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3RO-F3-qhA">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="IiC-gG-osh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="whb-qT-v3e">
-                                        <rect key="frame" x="0.0" y="417" width="343" height="200"/>
+                                        <rect key="frame" x="0.0" y="40" width="343" height="200"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CxR-D6-h6j" userLabel="searchAndClear">
-                                        <rect key="frame" x="0.0" y="617" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="240" width="343" height="363"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xkg-ZJ-tbh">
-                                                <rect key="frame" x="0.0" y="0.0" width="307" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="363"/>
                                                 <state key="normal" title="Search"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22n-zZ-ZVV">
-                                                <rect key="frame" x="307" y="0.0" width="36" height="30"/>
+                                                <rect key="frame" x="48" y="0.0" width="295" height="363"/>
                                                 <state key="normal" title="Clear"/>
                                             </button>
                                         </subviews>
@@ -191,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dev-zF-e4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1724" y="39.130434782608695"/>
+            <point key="canvasLocation" x="1726" y="36"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KMF-lp-vel">
@@ -209,7 +214,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IAg-WG-hy4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="-647.22638680659679"/>
+            <point key="canvasLocation" x="201" y="36"/>
         </scene>
     </scenes>
     <resources>
