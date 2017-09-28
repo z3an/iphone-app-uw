@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,40 +21,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backGround" translatesAutoresizingMaskIntoConstraints="NO" id="TYD-Sf-rnO">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Yan-b4-QIX">
-                                <rect key="frame" x="16" y="20" width="343" height="647"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UW ClassBox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdW-sd-BFH">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="647"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UW ClassBox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ng-kk-9NZ">
+                                <rect key="frame" x="74" y="101" width="227" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" red="0.91038483381271362" green="0.86032605171203613" blue="0.34482619166374207" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="TYD-Sf-rnO" secondAttribute="trailing" id="2LN-Vh-qP7"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Yan-b4-QIX" secondAttribute="bottom" id="2QP-sq-Bjn"/>
-                            <constraint firstItem="Yan-b4-QIX" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="8nr-BR-RXn"/>
-                            <constraint firstItem="TYD-Sf-rnO" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="eWX-rS-E54"/>
-                            <constraint firstItem="TYD-Sf-rnO" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="fHg-lM-1a3"/>
-                            <constraint firstItem="Yan-b4-QIX" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="har-aJ-F8P"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Yan-b4-QIX" secondAttribute="trailing" id="vTC-Ki-CXp"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="TYD-Sf-rnO" secondAttribute="bottom" id="yUd-Yk-WQr"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="backGround" width="188" height="188"/>
-    </resources>
 </document>
