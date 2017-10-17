@@ -13,8 +13,8 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBOutlet weak var termTextBox: UITextField!
     @IBOutlet weak var catalogTextBox: UITextField!
 
-    var termList = ["1111","2222","3333","4444","5555"]
-    var subjectList = ["MATH","CS","STAT"]
+    let termList = ["1111","2222","3333","4444","5555"]
+    let subjectList = ["MATH","CS","STAT"]
     
     
     override func viewDidLoad() {
@@ -28,6 +28,7 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         // Dispose of any resources that can be recreated.
     }
 
+    // termPicker
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -45,7 +46,7 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         self.termTextBox.text = self.termList[row]
         self.termPicker.isHidden = true
     }
-    
+
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == self.termTextBox {
             self.termPicker.isHidden = false
@@ -53,6 +54,7 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         }
     }
     
+    // subjectTable
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return subjectList.count
     }

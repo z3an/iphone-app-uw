@@ -311,23 +311,25 @@
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CoY-mp-vE3" userLabel="subjectTable">
                                                 <rect key="frame" x="73" y="0.0" width="207" height="360"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="CoY-mp-vE3" secondAttribute="height" multiplier="23:40" id="5R0-1H-VyT"/>
-                                                </constraints>
                                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                                 <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="sectionIndexTrackingBackgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="6qn-HZ-jWO">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="VGS-yx-3fh">
                                                         <rect key="frame" x="0.0" y="28" width="207" height="44"/>
                                                         <autoresizingMask key="autoresizingMask"/>
-                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6qn-HZ-jWO" id="0PJ-gx-Xnf">
-                                                            <rect key="frame" x="0.0" y="0.0" width="207" height="44"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VGS-yx-3fh" id="rrG-6k-16J">
+                                                            <rect key="frame" x="0.0" y="0.0" width="207" height="43.666666666666664"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </tableViewCellContentView>
+                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </tableViewCell>
                                                 </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="7mR-Za-831" id="OeM-qx-x5a"/>
+                                                    <outlet property="delegate" destination="7mR-Za-831" id="Hhi-NP-I9B"/>
+                                                </connections>
                                             </tableView>
                                         </subviews>
                                     </stackView>
@@ -424,7 +426,7 @@
                     <view key="view" contentMode="scaleToFill" id="nQb-Y2-Yax">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.26052902919999998" green="0.26052902919999998" blue="0.26052902919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Schedule" id="U43-Fq-Jqc"/>
                 </viewController>
@@ -443,7 +445,7 @@
                     <view key="view" contentMode="scaleToFill" id="cmz-AZ-OgX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.26052902919999998" green="0.26052902919999998" blue="0.26052902919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Course Requirements" id="yur-pb-wdN"/>
                 </viewController>
@@ -462,7 +464,7 @@
                     <view key="view" contentMode="scaleToFill" id="fEB-Pv-JfB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.26052902919999998" green="0.26052902919999998" blue="0.26052902919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Learn" id="PeG-jg-Ff3"/>
                 </viewController>
@@ -481,7 +483,7 @@
                     <view key="view" contentMode="scaleToFill" id="ahd-cY-sfU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.26052902919999998" green="0.26052902919999998" blue="0.26052902919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="WatCard" id="jQs-mm-SMO"/>
                 </viewController>
@@ -500,7 +502,7 @@
                     <view key="view" contentMode="scaleToFill" id="EQa-0I-KLt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.26052902919999998" green="0.26052902919999998" blue="0.26052902919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Library" id="WyG-4A-ALR"/>
                 </viewController>
@@ -519,7 +521,7 @@
                     <view key="view" contentMode="scaleToFill" id="4hq-7M-acr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.26052902919999998" green="0.26052902919999998" blue="0.26052902919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Games" id="6Kd-gu-aBR"/>
                 </viewController>
@@ -538,7 +540,7 @@
                     <view key="view" contentMode="scaleToFill" id="g5a-kM-pMF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.26052902919999998" green="0.26052902919999998" blue="0.26052902919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Advisor" id="Tzg-zf-BTI"/>
                 </viewController>
@@ -557,7 +559,7 @@
                     <view key="view" contentMode="scaleToFill" id="ZeE-bw-WMi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.26052902919999998" green="0.26052902919999998" blue="0.26052902919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Email" id="lkX-nf-r2o"/>
                 </viewController>
