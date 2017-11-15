@@ -68,6 +68,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03EFF8BD1FB9388200249CF7 /* WatSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WatSwift.framework; path = "/Users/Seed/Desktop/My Apps/iphone-app-uw/uw-app/WatSwift/build/Debug-iphoneos/WatSwift.framework"; sourceTree = "<absolute>"; };
+		03EFF8BE1FB9388200249CF7 /* WatSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = WatSwiftTests.xctest; path = "/Users/Seed/Desktop/My Apps/iphone-app-uw/uw-app/WatSwift/build/Debug-iphoneos/WatSwiftTests.xctest"; sourceTree = "<absolute>"; };
 		A121E1591EE2A26F004E0191 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		A121E15D1EE2A316004E0191 /* WatBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatBase.swift; sourceTree = "<group>"; };
 		A121E1621EE2A3E9004E0191 /* WatSwift.API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.API.swift; sourceTree = "<group>"; };
@@ -90,8 +92,6 @@
 		A121E1951EE2A986004E0191 /* WatSwift.Terms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.Terms.swift; sourceTree = "<group>"; };
 		A121E1981EE2A9BF004E0191 /* WatSwift.Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.Weather.swift; sourceTree = "<group>"; };
 		A121E19B1EE2A9CD004E0191 /* WatSwift.Transit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.Transit.swift; sourceTree = "<group>"; };
-		A1C857EB1D3CDE7100CA77C7 /* WatSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WatSwift.framework; path = "/Users/anzepeng/Desktop/iphone-app-uw/uw-app/WatSwift/build/Debug-iphoneos/WatSwift.framework"; sourceTree = "<absolute>"; };
-		A1C857F41D3CDE7100CA77C7 /* WatSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = WatSwiftTests.xctest; path = "/Users/anzepeng/Desktop/iphone-app-uw/uw-app/WatSwift/build/Debug-iphoneos/WatSwiftTests.xctest"; sourceTree = "<absolute>"; };
 		A1C858071D3CDE8200CA77C7 /* WatSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.swift; sourceTree = "<group>"; };
 		A1C858091D3CE19D00CA77C7 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,7 +188,7 @@
 			);
 			name = WatSwift;
 			productName = WatSwift;
-			productReference = A1C857EB1D3CDE7100CA77C7 /* WatSwift.framework */;
+			productReference = 03EFF8BD1FB9388200249CF7 /* WatSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A1C857F31D3CDE7100CA77C7 /* WatSwiftTests */ = {
@@ -206,7 +206,7 @@
 			);
 			name = WatSwiftTests;
 			productName = WatSwiftTests;
-			productReference = A1C857F41D3CDE7100CA77C7 /* WatSwiftTests.xctest */;
+			productReference = 03EFF8BE1FB9388200249CF7 /* WatSwiftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
