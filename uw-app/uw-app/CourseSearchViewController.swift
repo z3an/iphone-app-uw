@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
+class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var termTextBox: UITextField!
     @IBOutlet weak var termPicker: UIPickerView!
@@ -106,7 +106,11 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             emptyAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             self.present(emptyAlert, animated: true, completion: nil)
         }
-        
+        // TODO: add course checking
+            
+            
+            
+            
         else {
             self.performSegue(withIdentifier: "course_search", sender: self)
         }
