@@ -37,7 +37,7 @@ internal extension URL {
 public struct WatSwift {
     
     /// Your `apiKey` is required. If you do not have one, you can obtain one on [Waterloo's API Website](https://api.uwaterloo.ca)
-    public static var apiKey: String = ""
+    public static var apiKey: String = "6c00fb74e00f480d5bbfd80e81493c52"
     
     public struct API: WatBase {}
     public struct Awards: WatBase {}

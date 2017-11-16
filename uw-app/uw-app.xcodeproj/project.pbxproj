@@ -8,6 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		03E6E2041FBBF93B00C71726 /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2031FBBF93B00C71726 /* CourseDetailsViewController.swift */; };
+		03E6E2221FBD2C2D00C71726 /* WatSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2081FBD2C2D00C71726 /* WatSwift.swift */; };
+		03E6E2231FBD2C2D00C71726 /* WatBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2091FBD2C2D00C71726 /* WatBase.swift */; };
+		03E6E2241FBD2C2D00C71726 /* WatSwift.API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E20A1FBD2C2D00C71726 /* WatSwift.API.swift */; };
+		03E6E2251FBD2C2D00C71726 /* WatSwift.Awards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E20B1FBD2C2D00C71726 /* WatSwift.Awards.swift */; };
+		03E6E2261FBD2C2D00C71726 /* WatSwift.Blogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E20C1FBD2C2D00C71726 /* WatSwift.Blogs.swift */; };
+		03E6E2271FBD2C2D00C71726 /* WatSwift.Buildings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E20D1FBD2C2D00C71726 /* WatSwift.Buildings.swift */; };
+		03E6E2281FBD2C2D00C71726 /* WatSwift.Codes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E20E1FBD2C2D00C71726 /* WatSwift.Codes.swift */; };
+		03E6E2291FBD2C2D00C71726 /* WatSwift.Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E20F1FBD2C2D00C71726 /* WatSwift.Courses.swift */; };
+		03E6E22A1FBD2C2D00C71726 /* WatSwift.Directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2101FBD2C2D00C71726 /* WatSwift.Directory.swift */; };
+		03E6E22B1FBD2C2D00C71726 /* WatSwift.Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2111FBD2C2D00C71726 /* WatSwift.Events.swift */; };
+		03E6E22C1FBD2C2D00C71726 /* WatSwift.Feds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2121FBD2C2D00C71726 /* WatSwift.Feds.swift */; };
+		03E6E22D1FBD2C2D00C71726 /* WatSwift.FoodServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2131FBD2C2D00C71726 /* WatSwift.FoodServices.swift */; };
+		03E6E22E1FBD2C2D00C71726 /* WatSwift.News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2141FBD2C2D00C71726 /* WatSwift.News.swift */; };
+		03E6E22F1FBD2C2D00C71726 /* WatSwift.Opportunities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2151FBD2C2D00C71726 /* WatSwift.Opportunities.swift */; };
+		03E6E2301FBD2C2D00C71726 /* WatSwift.Parking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2161FBD2C2D00C71726 /* WatSwift.Parking.swift */; };
+		03E6E2311FBD2C2D00C71726 /* WatSwift.PointsOfInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2171FBD2C2D00C71726 /* WatSwift.PointsOfInterest.swift */; };
+		03E6E2321FBD2C2D00C71726 /* WatSwift.Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2181FBD2C2D00C71726 /* WatSwift.Resources.swift */; };
+		03E6E2331FBD2C2D00C71726 /* WatSwift.Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2191FBD2C2D00C71726 /* WatSwift.Server.swift */; };
+		03E6E2341FBD2C2D00C71726 /* WatSwift.Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E21A1FBD2C2D00C71726 /* WatSwift.Services.swift */; };
+		03E6E2351FBD2C2D00C71726 /* WatSwift.Terms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E21B1FBD2C2D00C71726 /* WatSwift.Terms.swift */; };
+		03E6E2361FBD2C2D00C71726 /* WatSwift.Transit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E21C1FBD2C2D00C71726 /* WatSwift.Transit.swift */; };
+		03E6E2371FBD2C2D00C71726 /* WatSwift.Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E21D1FBD2C2D00C71726 /* WatSwift.Weather.swift */; };
+		03E6E2381FBD2C2D00C71726 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E21F1FBD2C2D00C71726 /* Response.swift */; };
+		03E6E2391FBD2C2D00C71726 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2201FBD2C2D00C71726 /* JSON.swift */; };
 		03F185BD1F85DA7100F9D4D2 /* CourseSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F185BC1F85DA7100F9D4D2 /* CourseSearchViewController.swift */; };
 		4C4EA6611F64712D007A118E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EA6601F64712D007A118E /* AppDelegate.swift */; };
 		4C4EA6631F64712D007A118E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EA6621F64712D007A118E /* MainViewController.swift */; };
@@ -16,25 +40,32 @@
 		4C4EA66B1F64712D007A118E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4EA6691F64712D007A118E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		4C7EA5671FB3ED6C00A312DE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4C7EA5621FB3ED6B00A312DE /* WatSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A1C857EB1D3CDE7100CA77C7;
-			remoteInfo = WatSwift;
-		};
-		4C7EA5691FB3ED6C00A312DE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4C7EA5621FB3ED6B00A312DE /* WatSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A1C857F41D3CDE7100CA77C7;
-			remoteInfo = WatSwiftTests;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		03E6E2031FBBF93B00C71726 /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
+		03E6E2081FBD2C2D00C71726 /* WatSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.swift; sourceTree = "<group>"; };
+		03E6E2091FBD2C2D00C71726 /* WatBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatBase.swift; sourceTree = "<group>"; };
+		03E6E20A1FBD2C2D00C71726 /* WatSwift.API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.API.swift; sourceTree = "<group>"; };
+		03E6E20B1FBD2C2D00C71726 /* WatSwift.Awards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.Awards.swift; sourceTree = "<group>"; };
+		03E6E20C1FBD2C2D00C71726 /* WatSwift.Blogs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.Blogs.swift; sourceTree = "<group>"; };
+		03E6E20D1FBD2C2D00C71726 /* WatSwift.Buildings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.Buildings.swift; sourceTree = "<group>"; };
+		03E6E20E1FBD2C2D00C71726 /* WatSwift.Codes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.Codes.swift; sourceTree = "<group>"; };
+		03E6E20F1FBD2C2D00C71726 /* WatSwift.Courses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.Courses.swift; sourceTree = "<group>"; };
+		03E6E2101FBD2C2D00C71726 /* WatSwift.Directory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.Directory.swift; sourceTree = "<group>"; };
+		03E6E2111FBD2C2D00C71726 /* WatSwift.Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.Events.swift; sourceTree = "<group>"; };
+		03E6E2121FBD2C2D00C71726 /* WatSwift.Feds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.Feds.swift; sourceTree = "<group>"; };
+		03E6E2131FBD2C2D00C71726 /* WatSwift.FoodServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.FoodServices.swift; sourceTree = "<group>"; };
+		03E6E2141FBD2C2D00C71726 /* WatSwift.News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.News.swift; sourceTree = "<group>"; };
+		03E6E2151FBD2C2D00C71726 /* WatSwift.Opportunities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.Opportunities.swift; sourceTree = "<group>"; };
+		03E6E2161FBD2C2D00C71726 /* WatSwift.Parking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.Parking.swift; sourceTree = "<group>"; };
+		03E6E2171FBD2C2D00C71726 /* WatSwift.PointsOfInterest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.PointsOfInterest.swift; sourceTree = "<group>"; };
+		03E6E2181FBD2C2D00C71726 /* WatSwift.Resources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.Resources.swift; sourceTree = "<group>"; };
+		03E6E2191FBD2C2D00C71726 /* WatSwift.Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.Server.swift; sourceTree = "<group>"; };
+		03E6E21A1FBD2C2D00C71726 /* WatSwift.Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.Services.swift; sourceTree = "<group>"; };
+		03E6E21B1FBD2C2D00C71726 /* WatSwift.Terms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.Terms.swift; sourceTree = "<group>"; };
+		03E6E21C1FBD2C2D00C71726 /* WatSwift.Transit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.Transit.swift; sourceTree = "<group>"; };
+		03E6E21D1FBD2C2D00C71726 /* WatSwift.Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.Weather.swift; sourceTree = "<group>"; };
+		03E6E21F1FBD2C2D00C71726 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		03E6E2201FBD2C2D00C71726 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		03F185BC1F85DA7100F9D4D2 /* CourseSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseSearchViewController.swift; sourceTree = "<group>"; };
 		4C4EA65D1F64712D007A118E /* uw-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "uw-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4EA6601F64712D007A118E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +74,6 @@
 		4C4EA6671F64712D007A118E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C4EA66A1F64712D007A118E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C4EA66C1F64712D007A118E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C7EA5621FB3ED6B00A312DE /* WatSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WatSwift.xcodeproj; path = WatSwift/WatSwift.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +87,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03E6E21E1FBD2C2D00C71726 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				03E6E20A1FBD2C2D00C71726 /* WatSwift.API.swift */,
+				03E6E20B1FBD2C2D00C71726 /* WatSwift.Awards.swift */,
+				03E6E20C1FBD2C2D00C71726 /* WatSwift.Blogs.swift */,
+				03E6E20D1FBD2C2D00C71726 /* WatSwift.Buildings.swift */,
+				03E6E20E1FBD2C2D00C71726 /* WatSwift.Codes.swift */,
+				03E6E20F1FBD2C2D00C71726 /* WatSwift.Courses.swift */,
+				03E6E2101FBD2C2D00C71726 /* WatSwift.Directory.swift */,
+				03E6E2111FBD2C2D00C71726 /* WatSwift.Events.swift */,
+				03E6E2121FBD2C2D00C71726 /* WatSwift.Feds.swift */,
+				03E6E2131FBD2C2D00C71726 /* WatSwift.FoodServices.swift */,
+				03E6E2141FBD2C2D00C71726 /* WatSwift.News.swift */,
+				03E6E2151FBD2C2D00C71726 /* WatSwift.Opportunities.swift */,
+				03E6E2161FBD2C2D00C71726 /* WatSwift.Parking.swift */,
+				03E6E2171FBD2C2D00C71726 /* WatSwift.PointsOfInterest.swift */,
+				03E6E2181FBD2C2D00C71726 /* WatSwift.Resources.swift */,
+				03E6E2191FBD2C2D00C71726 /* WatSwift.Server.swift */,
+				03E6E21A1FBD2C2D00C71726 /* WatSwift.Services.swift */,
+				03E6E21B1FBD2C2D00C71726 /* WatSwift.Terms.swift */,
+				03E6E21C1FBD2C2D00C71726 /* WatSwift.Transit.swift */,
+				03E6E21D1FBD2C2D00C71726 /* WatSwift.Weather.swift */,
+			);
+			name = APIs;
+			sourceTree = "<group>";
+		};
+		03E6E2211FBD2C2D00C71726 /* WatSwift */ = {
+			isa = PBXGroup;
+			children = (
+				03E6E2081FBD2C2D00C71726 /* WatSwift.swift */,
+				03E6E2091FBD2C2D00C71726 /* WatBase.swift */,
+				03E6E21E1FBD2C2D00C71726 /* APIs */,
+				03E6E21F1FBD2C2D00C71726 /* Response.swift */,
+				03E6E2201FBD2C2D00C71726 /* JSON.swift */,
+			);
+			name = WatSwift;
+			path = ../WatSwift/WatSwift;
+			sourceTree = "<group>";
+		};
 		4C4EA6541F64712C007A118E = {
 			isa = PBXGroup;
 			children = (
@@ -76,7 +146,7 @@
 		4C4EA65F1F64712D007A118E /* uw-app */ = {
 			isa = PBXGroup;
 			children = (
-				4C7EA5621FB3ED6B00A312DE /* WatSwift.xcodeproj */,
+				03E6E2211FBD2C2D00C71726 /* WatSwift */,
 				4C4EA6601F64712D007A118E /* AppDelegate.swift */,
 				4C4EA6621F64712D007A118E /* MainViewController.swift */,
 				03F185BC1F85DA7100F9D4D2 /* CourseSearchViewController.swift */,
@@ -87,15 +157,6 @@
 				4C4EA66C1F64712D007A118E /* Info.plist */,
 			);
 			path = "uw-app";
-			sourceTree = "<group>";
-		};
-		4C7EA5631FB3ED6B00A312DE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4C7EA5681FB3ED6C00A312DE /* WatSwift.framework */,
-				4C7EA56A1FB3ED6C00A312DE /* WatSwiftTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,35 +206,12 @@
 			mainGroup = 4C4EA6541F64712C007A118E;
 			productRefGroup = 4C4EA65E1F64712D007A118E /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 4C7EA5631FB3ED6B00A312DE /* Products */;
-					ProjectRef = 4C7EA5621FB3ED6B00A312DE /* WatSwift.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				4C4EA65C1F64712D007A118E /* uw-app */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		4C7EA5681FB3ED6C00A312DE /* WatSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = WatSwift.framework;
-			remoteRef = 4C7EA5671FB3ED6C00A312DE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4C7EA56A1FB3ED6C00A312DE /* WatSwiftTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = WatSwiftTests.xctest;
-			remoteRef = 4C7EA5691FB3ED6C00A312DE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4C4EA65B1F64712D007A118E /* Resources */ = {
@@ -194,9 +232,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				03F185BD1F85DA7100F9D4D2 /* CourseSearchViewController.swift in Sources */,
+				03E6E2251FBD2C2D00C71726 /* WatSwift.Awards.swift in Sources */,
+				03E6E2331FBD2C2D00C71726 /* WatSwift.Server.swift in Sources */,
 				4C4EA6631F64712D007A118E /* MainViewController.swift in Sources */,
 				03E6E2041FBBF93B00C71726 /* CourseDetailsViewController.swift in Sources */,
+				03E6E22E1FBD2C2D00C71726 /* WatSwift.News.swift in Sources */,
+				03E6E2301FBD2C2D00C71726 /* WatSwift.Parking.swift in Sources */,
+				03E6E2281FBD2C2D00C71726 /* WatSwift.Codes.swift in Sources */,
+				03E6E2231FBD2C2D00C71726 /* WatBase.swift in Sources */,
+				03E6E2341FBD2C2D00C71726 /* WatSwift.Services.swift in Sources */,
+				03E6E22A1FBD2C2D00C71726 /* WatSwift.Directory.swift in Sources */,
+				03E6E2311FBD2C2D00C71726 /* WatSwift.PointsOfInterest.swift in Sources */,
+				03E6E2271FBD2C2D00C71726 /* WatSwift.Buildings.swift in Sources */,
+				03E6E2381FBD2C2D00C71726 /* Response.swift in Sources */,
+				03E6E2261FBD2C2D00C71726 /* WatSwift.Blogs.swift in Sources */,
+				03E6E2391FBD2C2D00C71726 /* JSON.swift in Sources */,
+				03E6E2361FBD2C2D00C71726 /* WatSwift.Transit.swift in Sources */,
+				03E6E22D1FBD2C2D00C71726 /* WatSwift.FoodServices.swift in Sources */,
+				03E6E22F1FBD2C2D00C71726 /* WatSwift.Opportunities.swift in Sources */,
+				03E6E2291FBD2C2D00C71726 /* WatSwift.Courses.swift in Sources */,
+				03E6E2371FBD2C2D00C71726 /* WatSwift.Weather.swift in Sources */,
+				03E6E2351FBD2C2D00C71726 /* WatSwift.Terms.swift in Sources */,
+				03E6E22C1FBD2C2D00C71726 /* WatSwift.Feds.swift in Sources */,
+				03E6E22B1FBD2C2D00C71726 /* WatSwift.Events.swift in Sources */,
+				03E6E2321FBD2C2D00C71726 /* WatSwift.Resources.swift in Sources */,
+				03E6E2221FBD2C2D00C71726 /* WatSwift.swift in Sources */,
 				4C4EA6611F64712D007A118E /* AppDelegate.swift in Sources */,
+				03E6E2241FBD2C2D00C71726 /* WatSwift.API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
