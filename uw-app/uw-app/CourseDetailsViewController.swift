@@ -8,7 +8,9 @@
 
 import UIKit
 
-class CourseDetailsViewController: UIViewController {
+class CourseDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    let sectionList = ["001", "002", "003", "004"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,4 +34,16 @@ class CourseDetailsViewController: UIViewController {
     }
     */
 
+    //sectionTable
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sectionList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let sectionCell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "sectionCell")
+        sectionCell.textLabel?.text = sectionList[indexPath.row]
+        return sectionCell
+    }
+    
+    
 }

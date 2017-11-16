@@ -487,35 +487,40 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aUR-Cz-H0F" userLabel="Course Sections">
-                                <rect key="frame" x="10" y="401" width="394" height="315"/>
+                                <rect key="frame" x="30" y="401" width="354" height="315"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Sections" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZu-09-l9L">
-                                        <rect key="frame" x="128" y="0.0" width="139" height="21"/>
+                                        <rect key="frame" x="108" y="0.0" width="139" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xdt-jS-DSa">
-                                        <rect key="frame" x="20" y="31" width="354" height="284"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xdt-jS-DSa" userLabel="Section Table">
+                                        <rect key="frame" x="0.0" y="31" width="354" height="284"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="284" id="OUD-hG-ngb"/>
                                         </constraints>
+                                        <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Section Cell" id="OM3-1j-vqS">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sectionCell" id="OM3-1j-vqS">
                                                 <rect key="frame" x="0.0" y="28" width="354" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OM3-1j-vqS" id="Cae-bB-QU9">
-                                                    <rect key="frame" x="0.0" y="0.0" width="354" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="354" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="WmP-wE-I4u" id="kiM-Zh-Gvw"/>
+                                            <outlet property="delegate" destination="WmP-wE-I4u" id="Kwd-Ih-jR1"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="xdt-jS-DSa" secondAttribute="trailing" constant="20" id="WqN-sq-Wb6"/>
-                                    <constraint firstItem="xdt-jS-DSa" firstAttribute="leading" secondItem="aUR-Cz-H0F" secondAttribute="leading" constant="20" id="i9L-h2-P1W"/>
+                                    <constraint firstAttribute="trailing" secondItem="xdt-jS-DSa" secondAttribute="trailing" id="WqN-sq-Wb6"/>
+                                    <constraint firstItem="xdt-jS-DSa" firstAttribute="leading" secondItem="aUR-Cz-H0F" secondAttribute="leading" id="i9L-h2-P1W"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -523,11 +528,11 @@
                         <constraints>
                             <constraint firstItem="7Ow-tm-Jfg" firstAttribute="leading" secondItem="dko-iN-sKE" secondAttribute="leadingMargin" id="67Q-2f-ez4"/>
                             <constraint firstItem="7Ow-tm-Jfg" firstAttribute="top" secondItem="1P3-eV-aDq" secondAttribute="bottom" id="7a7-6m-o6b"/>
-                            <constraint firstAttribute="trailing" secondItem="aUR-Cz-H0F" secondAttribute="trailing" constant="10" id="FnX-fM-UQl"/>
+                            <constraint firstAttribute="trailing" secondItem="aUR-Cz-H0F" secondAttribute="trailing" constant="30" id="FnX-fM-UQl"/>
                             <constraint firstItem="aUR-Cz-H0F" firstAttribute="top" secondItem="7Ow-tm-Jfg" secondAttribute="bottom" constant="20" id="Lob-gd-Ryu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7Ow-tm-Jfg" secondAttribute="trailing" id="WEc-Hh-JnH"/>
                             <constraint firstItem="9w3-iL-Fpw" firstAttribute="top" secondItem="aUR-Cz-H0F" secondAttribute="bottom" constant="20" id="bse-Pq-rv9"/>
-                            <constraint firstItem="aUR-Cz-H0F" firstAttribute="leading" secondItem="dko-iN-sKE" secondAttribute="leading" constant="10" id="itI-1u-Drh"/>
+                            <constraint firstItem="aUR-Cz-H0F" firstAttribute="leading" secondItem="dko-iN-sKE" secondAttribute="leading" constant="30" id="itI-1u-Drh"/>
                         </constraints>
                     </view>
                 </viewController>
