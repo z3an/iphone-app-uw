@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var termTextBox: UITextField!
@@ -19,8 +20,8 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
     
-    let termList = ["1111","2222","3333","4444","5555"]
-    let subjectList = ["MATH","CS","STAT"]
+    var termList = [String]()
+    var subjectList = ["MATH","CS","STAT"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,11 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
         clearButton.layer.cornerRadius = 10
         clearButton.clipsToBounds = true
         clearButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
+    
+        // initialize term list
+        termList.append(String(ViewController.previousTermId))
+        termList.append(String(ViewController.currentTermId))
+        termList.append(String(ViewController.nextTermId))
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,6 +71,7 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
         else { // pickerView == subjectPicker
             return subjectList.count
         }
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
