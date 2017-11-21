@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     static var previousTermId = Int()
     static var currentTermId = Int()
     static var nextTermId = Int()
+    static var termData = JSON(AnyObject.self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +22,16 @@ class ViewController: UIViewController {
         // initialize term api
         WatSwift.Terms.listAll { response in
             let term_data: JSON = response.data
-            if let termId = term_data["previous_term"].integer {
-                ViewController.previousTermId = termId
-            }
-            if let termId = term_data["current_term"].integer {
-                ViewController.currentTermId = termId
-            }
-            if let termId = term_data["next_term"].integer {
-                ViewController.nextTermId = termId
-            }
+            ViewController.termData = term_data
+//            if let termId = term_data["previous_term"].integer {
+//                ViewController.previousTermId = termId
+//            }
+//            if let termId = term_data["current_term"].integer {
+//                ViewController.currentTermId = termId
+//            }
+//            if let termId = term_data["next_term"].integer {
+//                ViewController.nextTermId = termId
+//            }
         }
         
         // initialize subject api

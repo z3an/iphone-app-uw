@@ -37,9 +37,13 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
         clearButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
     
         // initialize term list
-        termList.append(String(ViewController.previousTermId))
-        termList.append(String(ViewController.currentTermId))
-        termList.append(String(ViewController.nextTermId))
+        //termList.append(String(ViewController.previousTermId))
+        //termList.append(String(ViewController.currentTermId))
+        //termList.append(String(ViewController.nextTermId))
+        if let termId = ViewController.termData["previous_term"].integer {
+            termList.append(String(termId))
+        }
+    
     }
 
     override func didReceiveMemoryWarning() {
