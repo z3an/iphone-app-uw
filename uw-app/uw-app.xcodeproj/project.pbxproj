@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		035928331FC3CB42001F6206 /* TermClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035928321FC3CB42001F6206 /* TermClass.swift */; };
 		03E6E2041FBBF93B00C71726 /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2031FBBF93B00C71726 /* CourseDetailsViewController.swift */; };
 		03E6E2221FBD2C2D00C71726 /* WatSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2081FBD2C2D00C71726 /* WatSwift.swift */; };
 		03E6E2231FBD2C2D00C71726 /* WatBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2091FBD2C2D00C71726 /* WatBase.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		035928321FC3CB42001F6206 /* TermClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermClass.swift; sourceTree = "<group>"; };
 		03E6E2031FBBF93B00C71726 /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
 		03E6E2081FBD2C2D00C71726 /* WatSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.swift; sourceTree = "<group>"; };
 		03E6E2091FBD2C2D00C71726 /* WatBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatBase.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				03E6E2211FBD2C2D00C71726 /* WatSwift */,
 				4C4EA6601F64712D007A118E /* AppDelegate.swift */,
+				035928321FC3CB42001F6206 /* TermClass.swift */,
 				4C4EA6621F64712D007A118E /* MainViewController.swift */,
 				03F185BC1F85DA7100F9D4D2 /* CourseSearchViewController.swift */,
 				03E6E2031FBBF93B00C71726 /* CourseDetailsViewController.swift */,
@@ -258,6 +261,7 @@
 				03E6E2321FBD2C2D00C71726 /* WatSwift.Resources.swift in Sources */,
 				03E6E2221FBD2C2D00C71726 /* WatSwift.swift in Sources */,
 				4C4EA6611F64712D007A118E /* AppDelegate.swift in Sources */,
+				035928331FC3CB42001F6206 /* TermClass.swift in Sources */,
 				03E6E2241FBD2C2D00C71726 /* WatSwift.API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,6 +23,8 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
     var termList = [String]()
     var subjectList = ["MATH","CS","STAT"]
     
+    var yearList = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,13 +39,25 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
         clearButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
     
         // initialize term list
-        //termList.append(String(ViewController.previousTermId))
-        //termList.append(String(ViewController.currentTermId))
-        //termList.append(String(ViewController.nextTermId))
         if let termId = ViewController.termData["previous_term"].integer {
             termList.append(String(termId))
         }
-    
+        if let termId = ViewController.termData["current_term"].integer {
+            termList.append(String(termId))
+        }
+        if let termId = ViewController.termData["next_term"].integer {
+            termList.append(String(termId))
+        }
+        
+        let date = Date()
+        let calendar = Calendar.current
+        let curr_year = calendar.component(.year, from: date)
+        yearList.append(String(curr_year-1))
+        yearList.append(String(curr_year))
+        yearList.append(String(curr_year+1))
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
