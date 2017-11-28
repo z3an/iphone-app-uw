@@ -16,31 +16,27 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
     @IBOutlet weak var subjectTextBox: UITextField!
     @IBOutlet weak var subjectPicker: UIPickerView!
     @IBOutlet weak var catalogTextBox: UITextField!
+    @IBOutlet weak var catalogPicker: UIPickerView!
     
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
     
-    // get previous term, current term and next term
-    var termList = ViewController.termList
-    // get term course subject
-    var subjectList = [String]()
-    // get previous year, current year and next year
-    var yearList = [String]()
-    // get last term course subject
-    var lastTermCourse = ViewController.lastTermCourse
-    // get current term course subject
-    var currentTermCourse = ViewController.currentTermCourse
-    // get next term course subject
-    var nextTermCourse = ViewController.nextTermCourse
-    // get corresponding catalog based on chosen term and course subject
-    var catalogNumberList = [String]()
+    
+    var termList = ViewController.termList                      // get previous term, current term and next term
+    var subjectList = [String]()                                // get term course subject
+    var catalogNumberList = [String]()                          // get corresponding catalog based on chosen term and course subject
+    //var catalogNumberList = ["1", "2"]
+    
+    var lastTermCourse = ViewController.lastTermCourse          // get last term course subject
+    var currentTermCourse = ViewController.currentTermCourse    // get current term course subject
+    var nextTermCourse = ViewController.nextTermCourse          // get next term course subject
+    
+    //var yearList = [String]()                                 // get previous year, current year and next year
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        //searchButton.layer.borderWidth = 5.0
-        //searchButton.layer.borderColor = UIColor.white.cgColor
         searchButton.layer.cornerRadius = 10
         searchButton.clipsToBounds = true
         searchButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
@@ -48,14 +44,14 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
         clearButton.clipsToBounds = true
         clearButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
     
-        let date = Date()
-        let calendar = Calendar.current
-        let curr_year = calendar.component(.year, from: date)
-        yearList.append(String(curr_year-1))
-        yearList.append(String(curr_year))
-        yearList.append(String(curr_year+1))
+        //let date = Date()
+        //let calendar = Calendar.current
+        //let curr_year = calendar.component(.year, from: date)
+        //yearList.append(String(curr_year-1))
+        //yearList.append(String(curr_year))
+        //yearList.append(String(curr_year+1))
         getSubjectList("1181") //read the value chosen by user
-        getCatalogNumberList("1181", subject: "ACC")
+        getCatalogNumberList("1181", subject: "CS")
     }
     
     func getSubjectList(_ termID: String){
@@ -96,7 +92,7 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
         // Dispose of any resources that can be recreated.
     }
 
-    // termPicker and subjectPicker
+    // termPicker, subjectPicker, catalogPicker
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -107,8 +103,11 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
         if pickerView == self.termPicker {
             return termList[row]
         }
-        else {
+        else if pickerView == self.subjectPicker {
             return subjectList[row]
+        }
+        else {
+            return catalogNumberList[row]
         }
     }
     
@@ -117,10 +116,12 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
         if pickerView == self.termPicker {
             return termList.count
         }
-        else { // pickerView == subjectPicker
+        else if pickerView == self.subjectPicker {
             return subjectList.count
         }
-        
+        else {
+            return catalogNumberList.count
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -129,10 +130,13 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
             self.termTextBox.text = self.termList[row]
             self.termPicker.isHidden = true
         }
-        
         if pickerView == self.subjectPicker {
             self.subjectTextBox.text = self.subjectList[row]
             self.subjectPicker.isHidden = true
+        }
+        if pickerView == self.catalogPicker {
+            self.catalogTextBox.text = self.catalogNumberList[row]
+            self.catalogPicker.isHidden = true
         }
     }
 
@@ -141,9 +145,12 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
             self.termPicker.isHidden = false
             textField.endEditing(true)
         }
-        
-        if textField == self.subjectTextBox {
+        if textField == self.subjectTextBox	 {
             self.subjectPicker.isHidden = false
+            textField.endEditing(true)
+        }
+        if textField == self.catalogTextBox {
+            self.catalogPicker.isHidden = false
             textField.endEditing(true)
         }
     }
