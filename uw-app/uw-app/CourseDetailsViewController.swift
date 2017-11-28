@@ -10,12 +10,21 @@ import UIKit
 
 class CourseDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let sectionList = ["001", "002", "003", "004"]
-
+    var sectionList = [String]()
+    var classInfoList = CourseSearchViewController.classInfoList
+    var descriptionData = CourseSearchViewController.courseDescription
+    var courseCatalog: String = ""
+    var courseTitle: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        getSectionList()
+        getSectionTitle(jsonData: self.classInfoList.array![0])
+        getSectionCatalog(jsonData: self.classInfoList.array![0])
+        print(self.courseCatalog)
+        print(self.courseTitle)
+        print(self.descriptionData)
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,7 +32,32 @@ class CourseDetailsViewController: UIViewController, UITableViewDelegate, UITabl
         // Dispose of any resources that can be recreated.
     }
     
-
+    func getSectionList(){
+        for sectionJSON in self.classInfoList.array!{
+            if self.sectionList.contains(sectionJSON["section"].string!){
+                print("Error! This should never happen")
+            }
+            else{
+                self.sectionList.append(sectionJSON["section"].string!)
+            }
+        }
+    }
+    
+    // get the course catalog of section
+    func getSectionCatalog(jsonData:JSON)
+    {
+        self.courseCatalog = jsonData["subject"].string! + " " + jsonData["catalog_number"].string!
+    }
+    // get the course title of section
+    func getSectionTitle(jsonData:JSON)
+    {
+        self.courseTitle = jsonData["title"].string!
+    }
+    
+    // get the units of section
+    
+    
+    
     /*
     // MARK: - Navigation
 

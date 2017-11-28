@@ -35,6 +35,8 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
     var currentTermCourse = ViewController.currentTermCourse    // get current term course subject
     var nextTermCourse = ViewController.nextTermCourse          // get next term course subject
     
+    static var classInfoList = JSON(AnyObject.self)                  // get the class information based on subject, catalog and term
+    static var courseDescription: String = ""
     //var yearList = [String]()                                 // get previous year, current year and next year
     
     override func viewDidLoad() {
@@ -57,6 +59,15 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
         
     }
     
+    func getClassInfoList(_ termID: String, subjectID: String, catalogID: String){
+        // get the array of JSON class information
+        WatSwift.Terms.schedule(catalogNumber: catalogID, subject: subjectID, term: termID) { response in
+            let schedule_data: JSON = response.data
+            CourseSearchViewController.classInfoList = schedule_data
+            self.getCourseDescription()
+        }
+    }
+
     func getSubjectList(_ termID: String){
         var subjectListTmp = JSON(AnyObject.self)
         if (termID == self.termList[0]){
@@ -88,6 +99,14 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
                 }
             }
             self.ifSleep = false;
+        }
+    }
+    
+    func getCourseDescription(){
+        // add course description here
+        WatSwift.Courses.courseInformation(subject: self.subjectSelected, catalogNumber: self.catalogSelected) { response in
+            let description_data: JSON = response.data
+            CourseSearchViewController.courseDescription = description_data["description"].string!
         }
     }
 
@@ -146,6 +165,7 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
             self.catalogTextBox.text = self.catalogNumberList[row]
             self.catalogSelected = self.catalogNumberList[row]
             self.catalogPicker.isHidden = true
+            getClassInfoList(self.termSelected,subjectID: self.subjectSelected,catalogID: self.catalogSelected)
         }
     }
 
