@@ -20,10 +20,20 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
     
-    var termList = [String]()
-    var subjectList = ["MATH","CS","STAT"]
-    
+    // get previous term, current term and next term
+    var termList = ViewController.termList
+    // get term course subject
+    var subjectList = [String]()
+    // get previous year, current year and next year
     var yearList = [String]()
+    // get last term course subject
+    var lastTermCourse = ViewController.lastTermCourse
+    // get current term course subject
+    var currentTermCourse = ViewController.currentTermCourse
+    // get next term course subject
+    var nextTermCourse = ViewController.nextTermCourse
+    // get corresponding catalog based on chosen term and course subject
+    var catalogNumberList = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,26 +48,47 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
         clearButton.clipsToBounds = true
         clearButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
     
-        // initialize term list
-        if let termId = ViewController.termData["previous_term"].integer {
-            termList.append(String(termId))
-        }
-        if let termId = ViewController.termData["current_term"].integer {
-            termList.append(String(termId))
-        }
-        if let termId = ViewController.termData["next_term"].integer {
-            termList.append(String(termId))
-        }
-        
         let date = Date()
         let calendar = Calendar.current
         let curr_year = calendar.component(.year, from: date)
         yearList.append(String(curr_year-1))
         yearList.append(String(curr_year))
         yearList.append(String(curr_year+1))
-        
-        
-        
+        getSubjectList("1181") //read the value chosen by user
+        getCatalogNumberList("1181", subject: "ACC")
+    }
+    
+    func getSubjectList(_ termID: String){
+        var subjectListTmp = JSON(AnyObject.self)
+        if (termID == self.termList[0]){
+            subjectListTmp = self.lastTermCourse
+        }
+        else if (termID == self.termList[1]){
+            subjectListTmp = self.currentTermCourse
+        }
+        else{
+            subjectListTmp = self.nextTermCourse
+        }
+        for coursesJSON in subjectListTmp.array!{
+            if self.subjectList.contains(coursesJSON["subject"].string!){
+            }
+            else{
+                self.subjectList.append(coursesJSON["subject"].string!)
+            }
+        }
+    }
+
+    func getCatalogNumberList(_ termID: String, subject: String){
+        WatSwift.Terms.schedule(forSubject: subject, inTerm: termID) { response in
+            let catalog_data: JSON = response.data
+            for catalog in catalog_data.array!{
+                if self.catalogNumberList.contains(catalog["catalog_number"].string!){
+                }
+                else{
+                    self.catalogNumberList.append(catalog["catalog_number"].string!)
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

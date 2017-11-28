@@ -14,18 +14,53 @@ class ViewController: UIViewController {
     static var currentTermId = Int()
     static var nextTermId = Int()
     static var termData = JSON(AnyObject.self)
+    static var termList = [String]()
+    static var lastTermCourse = JSON(AnyObject.self)
+    static var currentTermCourse = JSON(AnyObject.self)
+    static var nextTermCourse = JSON(AnyObject.self)
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+    func addTermList(){
         // initialize term api
         WatSwift.Terms.listAll { response in
             let term_data: JSON = response.data
             ViewController.termData = term_data
+            if let termId = ViewController.termData["previous_term"].integer {
+                ViewController.termList.append(String(termId))
+            }
+            if let termId = ViewController.termData["current_term"].integer {
+                ViewController.termList.append(String(termId))
+            }
+            if let termId = ViewController.termData["next_term"].integer {
+                ViewController.termList.append(String(termId))
+            }
+            self.getTermCourse()
         }
     }
+    
+    func getTermCourse(){
+        // initialize course for each term
+        WatSwift.Terms.courses(for: ViewController.termList[0]) { response in
+            let course_data: JSON = response.data
+            ViewController.lastTermCourse = course_data
+        }
+        WatSwift.Terms.courses(for: ViewController.termList[1]) { response in
+            let course_data: JSON = response.data
+            ViewController.currentTermCourse = course_data
+        }
+        WatSwift.Terms.courses(for: ViewController.termList[2]) { response in
+            let course_data: JSON = response.data
+            ViewController.nextTermCourse = course_data
+        }
+    }
+    
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib. 
+        self.addTermList()
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
