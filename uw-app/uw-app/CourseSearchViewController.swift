@@ -25,7 +25,11 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
     var termList = ViewController.termList                      // get previous term, current term and next term
     var subjectList = [String]()                                // get term course subject
     var catalogNumberList = [String]()                          // get corresponding catalog based on chosen term and course subject
-    //var catalogNumberList = ["1", "2"]
+
+    var termSelected: String = ""
+    var subjectSelected: String = ""
+    var catalogSelected: String = ""
+    var ifSleep: Bool = true
     
     var lastTermCourse = ViewController.lastTermCourse          // get last term course subject
     var currentTermCourse = ViewController.currentTermCourse    // get current term course subject
@@ -50,8 +54,7 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
         //yearList.append(String(curr_year-1))
         //yearList.append(String(curr_year))
         //yearList.append(String(curr_year+1))
-        getSubjectList("1181") //read the value chosen by user
-        getCatalogNumberList("1181", subject: "CS")
+        
     }
     
     func getSubjectList(_ termID: String){
@@ -84,6 +87,7 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
                     self.catalogNumberList.append(catalog["catalog_number"].string!)
                 }
             }
+            self.ifSleep = false;
         }
     }
 
@@ -128,14 +132,19 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
         
         if pickerView == self.termPicker {
             self.termTextBox.text = self.termList[row]
+            self.termSelected = self.termList[row]
             self.termPicker.isHidden = true
+            getSubjectList(self.termSelected) //read the value chosen by user
         }
         if pickerView == self.subjectPicker {
             self.subjectTextBox.text = self.subjectList[row]
+            self.subjectSelected = self.subjectList[row]
             self.subjectPicker.isHidden = true
+            getCatalogNumberList(self.termSelected, subject: self.subjectSelected)
         }
         if pickerView == self.catalogPicker {
             self.catalogTextBox.text = self.catalogNumberList[row]
+            self.catalogSelected = self.catalogNumberList[row]
             self.catalogPicker.isHidden = true
         }
     }
@@ -146,10 +155,13 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
             textField.endEditing(true)
         }
         if textField == self.subjectTextBox	 {
+            self.subjectPicker.reloadAllComponents()
             self.subjectPicker.isHidden = false
             textField.endEditing(true)
         }
         if textField == self.catalogTextBox {
+            sleep(1)
+            self.catalogPicker.reloadAllComponents()
             self.catalogPicker.isHidden = false
             textField.endEditing(true)
         }
