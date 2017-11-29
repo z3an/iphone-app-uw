@@ -10,18 +10,28 @@ import UIKit
 
 class CourseDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var catalogLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    
     var sectionList = [String]()
-    var classInfoList = CourseSearchViewController.classInfoList
-    var descriptionData = CourseSearchViewController.courseDescription
+    var classInfoList: JSON = CourseSearchViewController.classInfoList
+    var descriptionData: String = CourseSearchViewController.courseDescription
     var courseCatalog: String = ""
     var courseTitle: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        getSectionList()
-        getSectionTitle(jsonData: self.classInfoList.array![0])
+        
         getSectionCatalog(jsonData: self.classInfoList.array![0])
+        catalogLabel.text = courseCatalog
+        getSectionTitle(jsonData: self.classInfoList.array![0])
+        titleLabel.text = courseTitle
+        descriptionLabel.text = descriptionData
+
+        getSectionList()
         //print(self.courseCatalog)
         //print(self.courseTitle)
         //print(self.descriptionData)
@@ -40,7 +50,20 @@ class CourseDetailsViewController: UIViewController, UITableViewDelegate, UITabl
                 print("Error! This should never happen")
             }
             else{
-                self.sectionList.append(sectionJSON["section"].string!)
+                var cell: String = ""
+                let sectionNumber:String = sectionJSON["section"].string!
+                cell += sectionNumber
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                self.sectionList.append(cell)
             }
         }
     }
