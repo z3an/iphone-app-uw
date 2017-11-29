@@ -106,6 +106,7 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
         // add course description here
         WatSwift.Courses.courseInformation(subject: self.subjectSelected, catalogNumber: self.catalogSelected) { response in
             let description_data: JSON = response.data
+            sleep(2)
             CourseSearchViewController.courseDescription = description_data["description"].string!
         }
     }
@@ -200,12 +201,8 @@ class CourseSearchViewController: UIViewController, UIPickerViewDataSource, UIPi
             let emptyAlert = UIAlertController(title: "Error", message: "Please fill up all the fields.", preferredStyle: UIAlertControllerStyle.alert)
             emptyAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             self.present(emptyAlert, animated: true, completion: nil)
+            return
         }
-        // TODO: add course checking
-            
-            
-            
-            
         else {
             self.performSegue(withIdentifier: "course_search", sender: self)
         }
