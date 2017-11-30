@@ -10,10 +10,10 @@ import UIKit
 
 class CourseDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var catalogLabel: UILabel!
+    //@IBOutlet weak var catalogLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    
+    @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var sectionTable: UITableView!
     
     var sectionList = [String]()
     var classInfoList: JSON = CourseSearchViewController.classInfoList
@@ -21,15 +21,26 @@ class CourseDetailsViewController: UIViewController, UITableViewDelegate, UITabl
     var courseCatalog: String = ""
     var courseTitle: String = ""
     
+    var selectedRowIndex: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        descriptionTextView.layer.cornerRadius = 10
+        descriptionTextView.clipsToBounds = true
+        //descriptionTextView.contentEdgeInsets = UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
+        sectionTable.layer.cornerRadius = 10
+        sectionTable.clipsToBounds = true
+        //sectionTable.contentEdgeInsets = UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
+        
+        
         
         getSectionCatalog(jsonData: self.classInfoList.array![0])
-        catalogLabel.text = courseCatalog
+        self.title = courseCatalog
+        //catalogLabel.text = courseCatalog
         getSectionTitle(jsonData: self.classInfoList.array![0])
         titleLabel.text = courseTitle
-        descriptionLabel.text = descriptionData
+        descriptionTextView.text = descriptionData
 
         getSectionList()
         //print(self.courseCatalog)
@@ -44,6 +55,57 @@ class CourseDetailsViewController: UIViewController, UITableViewDelegate, UITabl
         // Dispose of any resources that can be recreated.
     }
     
+
+    // get location
+    func getSectionLocation(jsonData:JSON) -> Array<String>
+    {
+        var courseLocation = [String]()
+        let classes = jsonData["classes"].array!
+        for classData in classes{
+            if classData["date"]["is_tba"].bool!{}
+            else{
+                courseLocation.append(classData["location"]["building"].string! + " " + classData["location"]["room"].string!)
+            }
+        }
+        return courseLocation
+    }
+    // get instructors
+    func getSectionInstructor(jsonData:JSON) -> [[String]]
+    {
+        var courseInstructor = [[String]]()
+        let classes = jsonData["classes"].array!
+        for classData in classes{
+            let instructors = classData["instructors"].array!
+            var instructorsArray = [String]()
+            for instructor in instructors{
+                instructorsArray.append(instructor.string!)
+            }
+            courseInstructor.append(instructorsArray)
+        }
+        return courseInstructor
+    }
+
+    //sectionTable
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sectionList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let sectionCell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "sectionCell")
+        sectionCell.textLabel?.text = sectionList[indexPath.row]
+        return sectionCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedRowIndex = indexPath.row
+        performSegue(withIdentifier: "section_details", sender: self)
+    }
+    
+    
+    
+    
+    // API
+    // get section number
     func getSectionList(){
         for sectionJSON in self.classInfoList.array!{
             if self.sectionList.contains(sectionJSON["section"].string!){
@@ -147,62 +209,11 @@ class CourseDetailsViewController: UIViewController, UITableViewDelegate, UITabl
             if classData["date"]["is_tba"].bool!{
                 courseTime.append("TBA")
             }
-            // is_cancelled  and is_closed
+                // is_cancelled  and is_closed
             else{
                 courseTime.append(classData["date"]["start_time"].string! + "-" + classData["date"]["end_time"].string! + classData["date"]["weekdays"].string!)
             }
         }
         return courseTime
     }
-    // get location
-    func getSectionLocation(jsonData:JSON) -> Array<String>
-    {
-        var courseLocation = [String]()
-        let classes = jsonData["classes"].array!
-        for classData in classes{
-            if classData["date"]["is_tba"].bool!{}
-            else{
-                courseLocation.append(classData["location"]["building"].string! + " " + classData["location"]["room"].string!)
-            }
-        }
-        return courseLocation
-    }
-    // get instructors
-    func getSectionInstructor(jsonData:JSON) -> [[String]]
-    {
-        var courseInstructor = [[String]]()
-        let classes = jsonData["classes"].array!
-        for classData in classes{
-            let instructors = classData["instructors"].array!
-            var instructorsArray = [String]()
-            for instructor in instructors{
-                instructorsArray.append(instructor.string!)
-            }
-            courseInstructor.append(instructorsArray)
-        }
-        return courseInstructor
-    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    //sectionTable
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sectionList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let sectionCell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "sectionCell")
-        sectionCell.textLabel?.text = sectionList[indexPath.row]
-        return sectionCell
-    }
-    
-    
 }
