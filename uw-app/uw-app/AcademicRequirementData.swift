@@ -9,11 +9,6 @@
 import Foundation
 import UIKit
 
-func callBrowser(url:String){
-    if (UIApplication.shared.canOpenURL(NSURL(string:url)! as URL)) {
-        UIApplication.shared.openURL(NSURL(string:url)! as URL)
-    }
-}
 
 let ActuarialScienceProgramJSON:[String:String] = [
     "Actuarial science":"http://ugradcalendar.uwaterloo.ca/page/MATH-Actuarial-Science",

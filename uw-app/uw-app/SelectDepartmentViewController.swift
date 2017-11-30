@@ -8,12 +8,39 @@
 
 import UIKit
 
-class SelectDepartmentViewController: UIViewController {
+class SelectDepartmentViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
 
+    @IBOutlet weak var departmentTextField: UITextField!
+    @IBOutlet weak var departmentPicker: UIPickerView!
+    var facultySelected = CourseRequirementsViewController.facultySelected
+    var departmentList = [String]()
+    static var departmentSelected: String = ""
+
+    @IBAction func nextAction(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "select_options", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        if (self.facultySelected == "MATH"){
+            self.departmentList.append("Actuarial Science")
+            self.departmentList.append("Applied Math")
+            self.departmentList.append("Combinatorics and Optimization including Mathematical Optimization")
+            self.departmentList.append("Computational Mathematics")
+            self.departmentList.append("Computer Science")
+            self.departmentList.append("Computing and Financial Management")
+            self.departmentList.append("Health Informatics Option")
+            self.departmentList.append("Mathematics/Business")
+            self.departmentList.append("Mathematical Studies")
+            self.departmentList.append("Mathematics/Teaching")
+            self.departmentList.append("Plans for Students outside the Mathematics Faculty")
+            self.departmentList.append("Pure Mathematics")
+            self.departmentList.append("Software Engineering")
+            self.departmentList.append("Statistics")
+        }
+        else{
+            print("Only support Math")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,18 +48,28 @@ class SelectDepartmentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func NextAction(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "select_options", sender: self)
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        self.view.endEditing(true)
+        return departmentList[row]
     }
-    */
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return departmentList.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.departmentTextField.text = self.departmentList[row]
+        SelectDepartmentViewController.departmentSelected = self.departmentList[row]
+        self.departmentPicker.isHidden = true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.departmentPicker.isHidden = false
+        textField.endEditing(true)
+    }
 
 }
