@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OptionViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
+class SelectOptionViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var optionTextField: UITextField!
     @IBOutlet weak var optionPicker: UIPickerView!
@@ -18,7 +18,7 @@ class OptionViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     
     @IBAction func optionButton(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "academicRequirement", sender: self)
+        self.performSegue(withIdentifier: "academic_requirements", sender: self)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +50,7 @@ class OptionViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.optionTextField.text = self.optionList[row]
-        OptionViewController.URL = facultyJSON[departmentSelected]![self.optionList[row]]!
+        SelectOptionViewController.URL = facultyJSON[departmentSelected]![self.optionList[row]]!
         self.optionPicker.isHidden = true
     }
     

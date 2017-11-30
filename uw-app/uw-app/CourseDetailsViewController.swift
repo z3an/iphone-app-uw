@@ -110,16 +110,6 @@ class CourseDetailsViewController: UIViewController, UITableViewDelegate, UITabl
                 var cell: String = ""
                 let sectionNumber:String = sectionJSON["section"].string!
                 cell += sectionNumber
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
                 self.sectionList.append(cell)
             }
         }

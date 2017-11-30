@@ -8,27 +8,45 @@
 
 import UIKit
 
-class CourseRequirementsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
+class SelectFacultyViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     @IBOutlet weak var facultyTextBox: UITextField!
     @IBOutlet weak var facultyPicker: UIPickerView!
     static var facultySelected: String = ""
-    let facultyList = ["MATH", "ARTS"]
+    let facultyList = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        
+        
+        // TODO: call getFacultyList()
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
-
+    
+    //func getFacultyList(jsonData:JSON) -> Array<String>
+    //{
+        
+    //}
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func NextAction(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "selectdepartment", sender: self)
+        self.performSegue(withIdentifier: "select_department", sender: self)
     }
-
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -44,7 +62,7 @@ class CourseRequirementsViewController: UIViewController, UIPickerViewDataSource
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.facultyTextBox.text = self.facultyList[row]
-        CourseRequirementsViewController.facultySelected = self.facultyList[row]
+        SelectFacultyViewController.facultySelected = self.facultyList[row]
         self.facultyPicker.isHidden = true
     }
     

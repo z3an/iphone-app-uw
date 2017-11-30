@@ -12,12 +12,12 @@ class SelectDepartmentViewController: UIViewController, UIPickerViewDataSource, 
 
     @IBOutlet weak var departmentTextField: UITextField!
     @IBOutlet weak var departmentPicker: UIPickerView!
-    var facultySelected = CourseRequirementsViewController.facultySelected
+    var facultySelected = SelectFacultyViewController.facultySelected
     var departmentList = [String]()
     static var departmentSelected: String = ""
 
     @IBAction func nextAction(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "select_options", sender: self)
+        self.performSegue(withIdentifier: "select_option", sender: self)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

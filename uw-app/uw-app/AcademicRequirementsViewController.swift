@@ -8,12 +8,12 @@
 
 import UIKit
 
-class AcademicRequirementViewController: UIViewController {
+class AcademicRequirementsViewController: UIViewController {
 
     @IBOutlet weak var academicWebView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL(string:OptionViewController.URL)
+        let url = URL(string:SelectOptionViewController.URL)
         academicWebView.loadRequest(URLRequest(url:url!))
         // Do any additional setup after loading the view.
     }

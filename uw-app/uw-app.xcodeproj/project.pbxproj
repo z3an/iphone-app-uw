@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		037083031FCF720F0064F7B2 /* CourseRequirementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037083021FCF720F0064F7B2 /* CourseRequirementsViewController.swift */; };
-		037083051FCF87AD0064F7B2 /* AcademicRequirementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037083041FCF87AD0064F7B2 /* AcademicRequirementData.swift */; };
+		037083031FCF720F0064F7B2 /* SelectFacultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037083021FCF720F0064F7B2 /* SelectFacultyViewController.swift */; };
+		037083051FCF87AD0064F7B2 /* AcademicRequirementsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037083041FCF87AD0064F7B2 /* AcademicRequirementsData.swift */; };
 		037083071FCF9CC70064F7B2 /* SelectDepartmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037083061FCF9CC70064F7B2 /* SelectDepartmentViewController.swift */; };
+		03C19D421FCFE7BC00F5ABF8 /* AcademicRequirementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19D3F1FCFE7BC00F5ABF8 /* AcademicRequirementsViewController.swift */; };
+		03C19D431FCFE7BC00F5ABF8 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19D401FCFE7BC00F5ABF8 /* EmailViewController.swift */; };
+		03C19D441FCFE7BC00F5ABF8 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19D411FCFE7BC00F5ABF8 /* LearnViewController.swift */; };
+		03C19D461FCFE92300F5ABF8 /* SelectOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19D451FCFE92300F5ABF8 /* SelectOptionViewController.swift */; };
 		03E6E2041FBBF93B00C71726 /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2031FBBF93B00C71726 /* CourseDetailsViewController.swift */; };
 		03E6E2221FBD2C2D00C71726 /* WatSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2081FBD2C2D00C71726 /* WatSwift.swift */; };
 		03E6E2231FBD2C2D00C71726 /* WatBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2091FBD2C2D00C71726 /* WatBase.swift */; };
@@ -44,9 +48,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		037083021FCF720F0064F7B2 /* CourseRequirementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseRequirementsViewController.swift; sourceTree = "<group>"; };
-		037083041FCF87AD0064F7B2 /* AcademicRequirementData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicRequirementData.swift; sourceTree = "<group>"; };
+		037083021FCF720F0064F7B2 /* SelectFacultyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectFacultyViewController.swift; sourceTree = "<group>"; };
+		037083041FCF87AD0064F7B2 /* AcademicRequirementsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicRequirementsData.swift; sourceTree = "<group>"; };
 		037083061FCF9CC70064F7B2 /* SelectDepartmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDepartmentViewController.swift; sourceTree = "<group>"; };
+		03C19D3F1FCFE7BC00F5ABF8 /* AcademicRequirementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicRequirementsViewController.swift; sourceTree = "<group>"; };
+		03C19D401FCFE7BC00F5ABF8 /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		03C19D411FCFE7BC00F5ABF8 /* LearnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
+		03C19D451FCFE92300F5ABF8 /* SelectOptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectOptionViewController.swift; sourceTree = "<group>"; };
 		03E6E2031FBBF93B00C71726 /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
 		03E6E2081FBD2C2D00C71726 /* WatSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.swift; sourceTree = "<group>"; };
 		03E6E2091FBD2C2D00C71726 /* WatBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatBase.swift; sourceTree = "<group>"; };
@@ -157,9 +165,13 @@
 				4C4EA6621F64712D007A118E /* MainViewController.swift */,
 				03F185BC1F85DA7100F9D4D2 /* CourseSearchViewController.swift */,
 				03E6E2031FBBF93B00C71726 /* CourseDetailsViewController.swift */,
-				037083021FCF720F0064F7B2 /* CourseRequirementsViewController.swift */,
+				037083021FCF720F0064F7B2 /* SelectFacultyViewController.swift */,
 				037083061FCF9CC70064F7B2 /* SelectDepartmentViewController.swift */,
-				037083041FCF87AD0064F7B2 /* AcademicRequirementData.swift */,
+				03C19D451FCFE92300F5ABF8 /* SelectOptionViewController.swift */,
+				03C19D3F1FCFE7BC00F5ABF8 /* AcademicRequirementsViewController.swift */,
+				037083041FCF87AD0064F7B2 /* AcademicRequirementsData.swift */,
+				03C19D401FCFE7BC00F5ABF8 /* EmailViewController.swift */,
+				03C19D411FCFE7BC00F5ABF8 /* LearnViewController.swift */,
 				4C4EA6641F64712D007A118E /* Main.storyboard */,
 				4C4EA6671F64712D007A118E /* Assets.xcassets */,
 				4C4EA6691F64712D007A118E /* LaunchScreen.storyboard */,
@@ -241,15 +253,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				03F185BD1F85DA7100F9D4D2 /* CourseSearchViewController.swift in Sources */,
-				037083031FCF720F0064F7B2 /* CourseRequirementsViewController.swift in Sources */,
+				037083031FCF720F0064F7B2 /* SelectFacultyViewController.swift in Sources */,
 				037083071FCF9CC70064F7B2 /* SelectDepartmentViewController.swift in Sources */,
 				03E6E2251FBD2C2D00C71726 /* WatSwift.Awards.swift in Sources */,
 				03E6E2331FBD2C2D00C71726 /* WatSwift.Server.swift in Sources */,
+				03C19D441FCFE7BC00F5ABF8 /* LearnViewController.swift in Sources */,
 				4C4EA6631F64712D007A118E /* MainViewController.swift in Sources */,
 				03E6E2041FBBF93B00C71726 /* CourseDetailsViewController.swift in Sources */,
 				03E6E22E1FBD2C2D00C71726 /* WatSwift.News.swift in Sources */,
 				03E6E2301FBD2C2D00C71726 /* WatSwift.Parking.swift in Sources */,
 				03E6E2281FBD2C2D00C71726 /* WatSwift.Codes.swift in Sources */,
+				03C19D461FCFE92300F5ABF8 /* SelectOptionViewController.swift in Sources */,
 				03E6E2231FBD2C2D00C71726 /* WatBase.swift in Sources */,
 				03E6E2341FBD2C2D00C71726 /* WatSwift.Services.swift in Sources */,
 				03E6E22A1FBD2C2D00C71726 /* WatSwift.Directory.swift in Sources */,
@@ -265,11 +279,13 @@
 				03E6E2371FBD2C2D00C71726 /* WatSwift.Weather.swift in Sources */,
 				03E6E2351FBD2C2D00C71726 /* WatSwift.Terms.swift in Sources */,
 				03E6E22C1FBD2C2D00C71726 /* WatSwift.Feds.swift in Sources */,
+				03C19D421FCFE7BC00F5ABF8 /* AcademicRequirementsViewController.swift in Sources */,
 				03E6E22B1FBD2C2D00C71726 /* WatSwift.Events.swift in Sources */,
 				03E6E2321FBD2C2D00C71726 /* WatSwift.Resources.swift in Sources */,
 				03E6E2221FBD2C2D00C71726 /* WatSwift.swift in Sources */,
 				4C4EA6611F64712D007A118E /* AppDelegate.swift in Sources */,
-				037083051FCF87AD0064F7B2 /* AcademicRequirementData.swift in Sources */,
+				037083051FCF87AD0064F7B2 /* AcademicRequirementsData.swift in Sources */,
+				03C19D431FCFE7BC00F5ABF8 /* EmailViewController.swift in Sources */,
 				03E6E2241FBD2C2D00C71726 /* WatSwift.API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
