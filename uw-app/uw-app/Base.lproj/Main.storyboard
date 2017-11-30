@@ -496,7 +496,7 @@
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHI-xj-Rh4">
                                         <rect key="frame" x="10" y="27" width="354" height="250"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&lt;Course Description&gt;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6aU-9r-Iqu" userLabel="Course Description Text View">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="&lt;Course Description&gt;" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6aU-9r-Iqu" userLabel="Course Description Text View">
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="250"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
