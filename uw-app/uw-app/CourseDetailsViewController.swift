@@ -48,6 +48,8 @@ class CourseDetailsViewController: UIViewController, UITableViewDelegate, UITabl
         //print(self.descriptionData)
         //var tmp = getSectionInstructor(jsonData: self.classInfoList.array![0])
         //print(tmp[1][1])
+        var urlString = facultyJSON["Computer Science"]!["Bachelor of Computer Science"]
+        callBrowser(url: urlString!)
     }
 
     override func didReceiveMemoryWarning() {

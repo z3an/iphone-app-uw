@@ -7,15 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
-var urlString = facultyJSON["Computer Science"]!["Bachelor of Computer Science"]
-//callBrowser(url: urlString!)
-
-//func callBrowser(url:String){
-//    if (UIApplication.shared.canOpenURL(NSURL(string:url)! as URL)) {
-//        UIApplication.shared.openURL(NSURL(string:url)! as URL)
-//    }
-//}
+func callBrowser(url:String){
+    if (UIApplication.shared.canOpenURL(NSURL(string:url)! as URL)) {
+        UIApplication.shared.openURL(NSURL(string:url)! as URL)
+    }
+}
 
 let ActuarialScienceProgramJSON:[String:String] = [
     "Actuarial science":"http://ugradcalendar.uwaterloo.ca/page/MATH-Actuarial-Science",

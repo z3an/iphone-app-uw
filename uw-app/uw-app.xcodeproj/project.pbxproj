@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		037083031FCF720F0064F7B2 /* CourseRequirementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037083021FCF720F0064F7B2 /* CourseRequirementsViewController.swift */; };
 		037083051FCF87AD0064F7B2 /* AcademicRequirementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037083041FCF87AD0064F7B2 /* AcademicRequirementData.swift */; };
+		037083071FCF9CC70064F7B2 /* SelectDepartmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037083061FCF9CC70064F7B2 /* SelectDepartmentViewController.swift */; };
 		03E6E2041FBBF93B00C71726 /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2031FBBF93B00C71726 /* CourseDetailsViewController.swift */; };
 		03E6E2221FBD2C2D00C71726 /* WatSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2081FBD2C2D00C71726 /* WatSwift.swift */; };
 		03E6E2231FBD2C2D00C71726 /* WatBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2091FBD2C2D00C71726 /* WatBase.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		037083021FCF720F0064F7B2 /* CourseRequirementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseRequirementsViewController.swift; sourceTree = "<group>"; };
 		037083041FCF87AD0064F7B2 /* AcademicRequirementData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicRequirementData.swift; sourceTree = "<group>"; };
+		037083061FCF9CC70064F7B2 /* SelectDepartmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDepartmentViewController.swift; sourceTree = "<group>"; };
 		03E6E2031FBBF93B00C71726 /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
 		03E6E2081FBD2C2D00C71726 /* WatSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.swift; sourceTree = "<group>"; };
 		03E6E2091FBD2C2D00C71726 /* WatBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatBase.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				03F185BC1F85DA7100F9D4D2 /* CourseSearchViewController.swift */,
 				03E6E2031FBBF93B00C71726 /* CourseDetailsViewController.swift */,
 				037083021FCF720F0064F7B2 /* CourseRequirementsViewController.swift */,
+				037083061FCF9CC70064F7B2 /* SelectDepartmentViewController.swift */,
 				037083041FCF87AD0064F7B2 /* AcademicRequirementData.swift */,
 				4C4EA6641F64712D007A118E /* Main.storyboard */,
 				4C4EA6671F64712D007A118E /* Assets.xcassets */,
@@ -239,6 +242,7 @@
 			files = (
 				03F185BD1F85DA7100F9D4D2 /* CourseSearchViewController.swift in Sources */,
 				037083031FCF720F0064F7B2 /* CourseRequirementsViewController.swift in Sources */,
+				037083071FCF9CC70064F7B2 /* SelectDepartmentViewController.swift in Sources */,
 				03E6E2251FBD2C2D00C71726 /* WatSwift.Awards.swift in Sources */,
 				03E6E2331FBD2C2D00C71726 /* WatSwift.Server.swift in Sources */,
 				4C4EA6631F64712D007A118E /* MainViewController.swift in Sources */,

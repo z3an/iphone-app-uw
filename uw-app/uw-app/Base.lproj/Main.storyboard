@@ -641,11 +641,32 @@
                                     <action selector="NextAction:" destination="0BT-ed-McO" eventType="touchUpInside" id="OeY-qd-VDn"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ7-gX-Tkt">
+                                <rect key="frame" x="159" y="177" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0BT-ed-McO" id="1Qy-fg-2BO"/>
+                                </connections>
+                            </textField>
+                            <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F3I-Ok-FK7">
+                                <rect key="frame" x="0.0" y="520" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="0BT-ed-McO" id="YC6-7a-rhU"/>
+                                    <outlet property="delegate" destination="0BT-ed-McO" id="Sil-Rk-hsh"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.26052902919999998" green="0.26052902919999998" blue="0.26052902919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Course Requirements" id="yur-pb-wdN"/>
                     <connections>
+                        <outlet property="facultyPicker" destination="F3I-Ok-FK7" id="xDV-YY-npv"/>
+                        <outlet property="facultyTextBox" destination="ZJ7-gX-Tkt" id="pgG-WA-fX1"/>
                         <segue destination="mtj-ws-DkW" kind="show" identifier="next_department" id="u6t-vI-2Js"/>
                     </connections>
                 </viewController>
@@ -653,10 +674,28 @@
             </objects>
             <point key="canvasLocation" x="4797" y="801"/>
         </scene>
-        <!--View Controller-->
+        <!--Template-->
+        <scene sceneID="DCT-Sh-ZB9">
+            <objects>
+                <viewController title="Template" id="Vef-0P-7d5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b3g-6R-iK7"/>
+                        <viewControllerLayoutGuide type="bottom" id="ATI-GJ-3mT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YI0-sc-P97">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.26052902919999998" green="0.26052902919999998" blue="0.26052902919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ct-ei-dbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8832" y="-1229"/>
+        </scene>
+        <!--Select Department-->
         <scene sceneID="H0k-fd-PBA">
             <objects>
-                <viewController id="mtj-ws-DkW" sceneMemberID="viewController">
+                <viewController title="Select Department" id="mtj-ws-DkW" userLabel="Select Department" customClass="SelectDepartmentViewController" customModule="uw_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8UE-9a-0N4"/>
                         <viewControllerLayoutGuide type="bottom" id="qIt-TT-YDK"/>
@@ -664,13 +703,44 @@
                     <view key="view" contentMode="scaleToFill" id="jWU-0G-dr3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEL-9u-FDv">
+                                <rect key="frame" x="184" y="526" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="NextAction:" destination="mtj-ws-DkW" eventType="touchUpInside" id="CwR-JP-i51"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.26052902919999998" green="0.26052902919999998" blue="0.26052902919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="CIt-C2-xZf"/>
+                    <connections>
+                        <segue destination="QWP-Nn-dXf" kind="show" identifier="select_options" id="pDp-b1-tKd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVU-lg-O0u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8390" y="-123"/>
+            <point key="canvasLocation" x="8513" y="-123"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fSs-Rd-gZj">
+            <objects>
+                <viewController id="QWP-Nn-dXf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gOf-yC-RDD"/>
+                        <viewControllerLayoutGuide type="bottom" id="bpV-4a-cfR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XhW-NE-h6A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.26052902919999998" green="0.26052902919999998" blue="0.26052902919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AoU-7x-Ebc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9252" y="-123"/>
         </scene>
         <!--Learn-->
         <scene sceneID="NgL-Mp-9rj">
