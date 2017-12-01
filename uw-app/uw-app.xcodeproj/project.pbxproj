@@ -14,6 +14,9 @@
 		03C19D431FCFE7BC00F5ABF8 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19D401FCFE7BC00F5ABF8 /* EmailViewController.swift */; };
 		03C19D441FCFE7BC00F5ABF8 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19D411FCFE7BC00F5ABF8 /* LearnViewController.swift */; };
 		03C19D461FCFE92300F5ABF8 /* SelectOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19D451FCFE92300F5ABF8 /* SelectOptionViewController.swift */; };
+		03C19D481FD0F8FB00F5ABF8 /* SectionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19D471FD0F8FB00F5ABF8 /* SectionDetailsViewController.swift */; };
+		03C19D4A1FD118F300F5ABF8 /* SectionClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19D491FD118F300F5ABF8 /* SectionClass.swift */; };
+		03C19D4C1FD1205F00F5ABF8 /* RMFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19D4B1FD1205F00F5ABF8 /* RMFViewController.swift */; };
 		03E6E2041FBBF93B00C71726 /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2031FBBF93B00C71726 /* CourseDetailsViewController.swift */; };
 		03E6E2221FBD2C2D00C71726 /* WatSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2081FBD2C2D00C71726 /* WatSwift.swift */; };
 		03E6E2231FBD2C2D00C71726 /* WatBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2091FBD2C2D00C71726 /* WatBase.swift */; };
@@ -55,6 +58,9 @@
 		03C19D401FCFE7BC00F5ABF8 /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		03C19D411FCFE7BC00F5ABF8 /* LearnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
 		03C19D451FCFE92300F5ABF8 /* SelectOptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectOptionViewController.swift; sourceTree = "<group>"; };
+		03C19D471FD0F8FB00F5ABF8 /* SectionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionDetailsViewController.swift; sourceTree = "<group>"; };
+		03C19D491FD118F300F5ABF8 /* SectionClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionClass.swift; sourceTree = "<group>"; };
+		03C19D4B1FD1205F00F5ABF8 /* RMFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMFViewController.swift; sourceTree = "<group>"; };
 		03E6E2031FBBF93B00C71726 /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
 		03E6E2081FBD2C2D00C71726 /* WatSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.swift; sourceTree = "<group>"; };
 		03E6E2091FBD2C2D00C71726 /* WatBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatBase.swift; sourceTree = "<group>"; };
@@ -162,9 +168,12 @@
 			children = (
 				03E6E2211FBD2C2D00C71726 /* WatSwift */,
 				4C4EA6601F64712D007A118E /* AppDelegate.swift */,
+				03C19D491FD118F300F5ABF8 /* SectionClass.swift */,
 				4C4EA6621F64712D007A118E /* MainViewController.swift */,
 				03F185BC1F85DA7100F9D4D2 /* CourseSearchViewController.swift */,
 				03E6E2031FBBF93B00C71726 /* CourseDetailsViewController.swift */,
+				03C19D471FD0F8FB00F5ABF8 /* SectionDetailsViewController.swift */,
+				03C19D4B1FD1205F00F5ABF8 /* RMFViewController.swift */,
 				037083021FCF720F0064F7B2 /* SelectFacultyViewController.swift */,
 				037083061FCF9CC70064F7B2 /* SelectDepartmentViewController.swift */,
 				03C19D451FCFE92300F5ABF8 /* SelectOptionViewController.swift */,
@@ -257,8 +266,10 @@
 				037083071FCF9CC70064F7B2 /* SelectDepartmentViewController.swift in Sources */,
 				03E6E2251FBD2C2D00C71726 /* WatSwift.Awards.swift in Sources */,
 				03E6E2331FBD2C2D00C71726 /* WatSwift.Server.swift in Sources */,
+				03C19D4A1FD118F300F5ABF8 /* SectionClass.swift in Sources */,
 				03C19D441FCFE7BC00F5ABF8 /* LearnViewController.swift in Sources */,
 				4C4EA6631F64712D007A118E /* MainViewController.swift in Sources */,
+				03C19D481FD0F8FB00F5ABF8 /* SectionDetailsViewController.swift in Sources */,
 				03E6E2041FBBF93B00C71726 /* CourseDetailsViewController.swift in Sources */,
 				03E6E22E1FBD2C2D00C71726 /* WatSwift.News.swift in Sources */,
 				03E6E2301FBD2C2D00C71726 /* WatSwift.Parking.swift in Sources */,
@@ -278,6 +289,7 @@
 				03E6E2291FBD2C2D00C71726 /* WatSwift.Courses.swift in Sources */,
 				03E6E2371FBD2C2D00C71726 /* WatSwift.Weather.swift in Sources */,
 				03E6E2351FBD2C2D00C71726 /* WatSwift.Terms.swift in Sources */,
+				03C19D4C1FD1205F00F5ABF8 /* RMFViewController.swift in Sources */,
 				03E6E22C1FBD2C2D00C71726 /* WatSwift.Feds.swift in Sources */,
 				03C19D421FCFE7BC00F5ABF8 /* AcademicRequirementsViewController.swift in Sources */,
 				03E6E22B1FBD2C2D00C71726 /* WatSwift.Events.swift in Sources */,

@@ -18,10 +18,13 @@ class CourseDetailsViewController: UIViewController, UITableViewDelegate, UITabl
     var sectionList = [String]()
     var classInfoList: JSON = CourseSearchViewController.classInfoList
     var descriptionData: String = CourseSearchViewController.courseDescription
-    var courseCatalog: String = ""
-    var courseTitle: String = ""
-    
-    var selectedRowIndex: Int = 0
+    var selectedSectionJSON = JSON(AnyObject.self)
+    static var courseCatalog: String = ""
+    static var courseTitle: String = ""
+    static var selectedSectionNumber: String = ""
+    static var selectedDatetime = Array<String>()
+    static var selectedLocation = Array<String>()
+    static var selectedInstructor = [[String]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,14 +36,12 @@ class CourseDetailsViewController: UIViewController, UITableViewDelegate, UITabl
         sectionTable.clipsToBounds = true
         //sectionTable.contentEdgeInsets = UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
         
-        
-        
         getSectionCatalog(jsonData: self.classInfoList.array![0])
-        self.title = courseCatalog
+        self.title = CourseDetailsViewController.courseCatalog
         //catalogLabel.text = courseCatalog
         getSectionTitle(jsonData: self.classInfoList.array![0])
-        titleLabel.text = courseTitle
-        descriptionTextView.text = descriptionData
+        titleLabel.text = CourseDetailsViewController.courseTitle
+        descriptionTextView.text =  "Units: " + getSectionUnits(jsonData: self.classInfoList.array![0]) + "\n\n" + descriptionData
 
         getSectionList()
     }
@@ -50,7 +51,27 @@ class CourseDetailsViewController: UIViewController, UITableViewDelegate, UITabl
         // Dispose of any resources that can be recreated.
     }
     
-
+    //sectionTable
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sectionList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let sectionCell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "sectionCell")
+        sectionCell.textLabel?.text = sectionList[indexPath.row]
+        return sectionCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedSectionJSON = self.classInfoList.array![indexPath.row]
+        CourseDetailsViewController.selectedSectionNumber = selectedSectionJSON["section"].string!
+        CourseDetailsViewController.selectedDatetime = getSectionTime(jsonData: selectedSectionJSON)
+        CourseDetailsViewController.selectedLocation = getSectionLocation(jsonData: selectedSectionJSON)
+        CourseDetailsViewController.selectedInstructor = getSectionInstructor(jsonData: selectedSectionJSON)
+        performSegue(withIdentifier: "section_details", sender: self)
+    }
+    
+    // API
     // get location
     func getSectionLocation(jsonData:JSON) -> Array<String>
     {
@@ -80,27 +101,7 @@ class CourseDetailsViewController: UIViewController, UITableViewDelegate, UITabl
         return courseInstructor
     }
 
-    //sectionTable
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sectionList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let sectionCell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "sectionCell")
-        sectionCell.textLabel?.text = sectionList[indexPath.row]
-        return sectionCell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedRowIndex = indexPath.row
-        performSegue(withIdentifier: "section_details", sender: self)
-    }
-    
-    
-    
-    
-    // API
-    // get section number
+    // get section number and time
     func getSectionList(){
         for sectionJSON in self.classInfoList.array!{
             if self.sectionList.contains(sectionJSON["section"].string!){
@@ -109,7 +110,11 @@ class CourseDetailsViewController: UIViewController, UITableViewDelegate, UITabl
             else{
                 var cell: String = ""
                 let sectionNumber:String = sectionJSON["section"].string!
-                cell += sectionNumber
+                cell = cell + sectionNumber
+                let datetimeArray = getSectionTime(jsonData: sectionJSON)
+                for datetime: String in datetimeArray {
+                    cell = cell + " " + datetime
+                }
                 self.sectionList.append(cell)
             }
         }
@@ -118,12 +123,12 @@ class CourseDetailsViewController: UIViewController, UITableViewDelegate, UITabl
     // get the course catalog of section
     func getSectionCatalog(jsonData:JSON)
     {
-        self.courseCatalog = jsonData["subject"].string! + " " + jsonData["catalog_number"].string!
+        CourseDetailsViewController.courseCatalog = jsonData["subject"].string! + " " + jsonData["catalog_number"].string!
     }
     // get the course title of section
     func getSectionTitle(jsonData:JSON)
     {
-        self.courseTitle = jsonData["title"].string!
+        CourseDetailsViewController.courseTitle = jsonData["title"].string!
     }
     // get the units of section most of them are 0.5
     func getSectionUnits(jsonData:JSON) -> String

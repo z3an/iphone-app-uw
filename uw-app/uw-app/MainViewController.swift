@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     static var currentTermCourse = JSON(AnyObject.self)
     static var nextTermCourse = JSON(AnyObject.self)
     
+    static var addedSection = Array<SectionClass>()
+    
     func addTermList(){
         // initialize term api
         WatSwift.Terms.listAll { response in

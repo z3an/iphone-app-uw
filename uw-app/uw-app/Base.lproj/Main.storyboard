@@ -587,7 +587,7 @@
         <!--Section Details-->
         <scene sceneID="QPU-Hb-A9h">
             <objects>
-                <viewController title="Section Details" id="rcq-YQ-MJd" sceneMemberID="viewController">
+                <viewController title="Section Details" id="rcq-YQ-MJd" customClass="SectionDetailsViewController" customModule="uw_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tpv-gu-xFl"/>
                         <viewControllerLayoutGuide type="bottom" id="qwr-yS-2hP"/>
@@ -595,12 +595,124 @@
                     <view key="view" contentMode="scaleToFill" id="0No-ZZ-VlI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Class Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGi-ae-8AM">
+                                <rect key="frame" x="36" y="156" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WYt-Hu-nAn" userLabel="Class Time Text Field">
+                                <rect key="frame" x="148" y="151" width="236" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="rcq-YQ-MJd" id="g7m-D8-qZK"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfZ-Sf-Nkx">
+                                <rect key="frame" x="36" y="205" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tyq-YX-zS3" userLabel="Location Text Field">
+                                <rect key="frame" x="148" y="200" width="236" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="rcq-YQ-MJd" id="3BE-fZ-m5h"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instructor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pR2-Pl-7pY">
+                                <rect key="frame" x="36" y="260" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0EQ-nr-IV8" userLabel="Instructor Text Field">
+                                <rect key="frame" x="148" y="255" width="236" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="rcq-YQ-MJd" id="CBR-2V-Fje"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpc-1s-rCW">
+                                <rect key="frame" x="177" y="288" width="178" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go to RateMyProfessors"/>
+                                <connections>
+                                    <action selector="RMFAction:" destination="rcq-YQ-MJd" eventType="touchUpInside" id="obI-X0-CoM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oB-BP-TU8">
+                                <rect key="frame" x="109" y="402" width="179" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add to Your Schedule"/>
+                                <connections>
+                                    <action selector="AddScheduleAction:" destination="rcq-YQ-MJd" eventType="touchUpInside" id="F87-oF-gEY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.26052902919999998" green="0.26052902919999998" blue="0.26052902919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="addScheduleButton" destination="0oB-BP-TU8" id="Lfs-hD-Poq"/>
+                        <outlet property="classTimeTextBox" destination="WYt-Hu-nAn" id="hqK-sC-J1e"/>
+                        <outlet property="instructorTextBox" destination="0EQ-nr-IV8" id="HEo-1e-AkT"/>
+                        <outlet property="locationTextBox" destination="tyq-YX-zS3" id="aXK-Cp-yJZ"/>
+                        <segue destination="JWQ-E0-sO9" kind="show" identifier="rmf" id="53d-yR-s7g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iFF-U4-dS0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7516" y="-123"/>
+            <point key="canvasLocation" x="7515.9420289855079" y="-123.09782608695653"/>
+        </scene>
+        <!--Rate My Professors-->
+        <scene sceneID="NwY-hT-iav">
+            <objects>
+                <viewController title="Rate My Professors" id="JWQ-E0-sO9" customClass="RMFViewController" customModule="uw_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Xc-by-kpj"/>
+                        <viewControllerLayoutGuide type="bottom" id="OkK-f9-KTO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ULY-6V-hUD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7n-JM-4kQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="JWQ-E0-sO9" id="yWR-gI-TNM"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="z7n-JM-4kQ" secondAttribute="trailing" id="FXG-h0-8M5"/>
+                            <constraint firstItem="OkK-f9-KTO" firstAttribute="top" secondItem="z7n-JM-4kQ" secondAttribute="bottom" id="K6f-D2-Gzj"/>
+                            <constraint firstItem="z7n-JM-4kQ" firstAttribute="top" secondItem="1Xc-by-kpj" secondAttribute="bottom" constant="-64" id="paI-4s-Ofm"/>
+                            <constraint firstItem="z7n-JM-4kQ" firstAttribute="leading" secondItem="ULY-6V-hUD" secondAttribute="leading" id="u2B-sW-d42"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="RMFWebView" destination="z7n-JM-4kQ" id="Tl4-1l-RQa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YbY-2k-hTc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8233" y="-123"/>
         </scene>
         <!--Course Schedule-->
         <scene sceneID="mGl-is-DVl">
@@ -690,7 +802,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ct-ei-dbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8832" y="-1229"/>
+            <point key="canvasLocation" x="4610" y="-1110"/>
         </scene>
         <!--Select Department-->
         <scene sceneID="H0k-fd-PBA">
@@ -743,7 +855,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVU-lg-O0u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8513" y="-123"/>
+            <point key="canvasLocation" x="9062" y="-123"/>
         </scene>
         <!--Select Option-->
         <scene sceneID="fSs-Rd-gZj">
@@ -796,7 +908,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AoU-7x-Ebc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9250.7246376811599" y="-123.09782608695653"/>
+            <point key="canvasLocation" x="9801" y="-123"/>
         </scene>
         <!--Academic Requirements-->
         <scene sceneID="I9K-cE-JmI">
@@ -830,7 +942,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyw-BC-3so" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10021.739130434784" y="-123.09782608695653"/>
+            <point key="canvasLocation" x="10572" y="-123"/>
         </scene>
         <!--Learn-->
         <scene sceneID="NgL-Mp-9rj">

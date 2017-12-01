@@ -12,8 +12,9 @@ class SelectFacultyViewController: UIViewController, UIPickerViewDataSource, UIP
     @IBOutlet weak var facultyTextBox: UITextField!
     @IBOutlet weak var facultyPicker: UIPickerView!
     static var facultySelected: String = ""
-    let facultyList = [String]()
-
+    //let facultyList = [String]()
+    let facultyList = ["MATH"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
