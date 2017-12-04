@@ -59,6 +59,6 @@ class SectionDetailsViewController: UIViewController {
         addScheduleButton.isEnabled = false
         // TODO: add remove from schedule button
     }
-    
+    //TODO : check time conflict
 
 }
