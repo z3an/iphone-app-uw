@@ -57,6 +57,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //var test = Utilities.convertTo24Hour(oriDateTime: "03:00-04:20TTh")
+        
         // Do any additional setup after loading the view, typically from a nib. 
         self.addTermList()
     }

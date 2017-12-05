@@ -113,6 +113,8 @@ class CourseDetailsViewController: UIViewController, UITableViewDelegate, UITabl
                 cell = cell + sectionNumber
                 let datetimeArray = getSectionTime(jsonData: sectionJSON)
                 for datetime: String in datetimeArray {
+                    //let datetime_24hour: String = Utilities.convertTo24Hour(oriDateTime: datetime)
+                    //cell = cell + " " + datetime_24hour
                     cell = cell + " " + datetime
                 }
                 self.sectionList.append(cell)
