@@ -116,23 +116,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03105D631FD645E10090F320 /* View Controller */ = {
+		03105D631FD645E10090F320 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				03C19D491FD118F300F5ABF8 /* SectionClass.swift */,
+				0378E64F1FD65AE200A12E74 /* Utilities.swift */,
+				0378E6511FD6761B00A12E74 /* Course Search */,
+				0378E6521FD6763900A12E74 /* Course Requirements */,
+				0378E6531FD6766100A12E74 /* Course Schedule */,
 				4C4EA6621F64712D007A118E /* MainViewController.swift */,
+				03C19D401FCFE7BC00F5ABF8 /* EmailViewController.swift */,
+				03C19D411FCFE7BC00F5ABF8 /* LearnViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0378E6511FD6761B00A12E74 /* Course Search */ = {
+			isa = PBXGroup;
+			children = (
 				03F185BC1F85DA7100F9D4D2 /* CourseSearchViewController.swift */,
 				03E6E2031FBBF93B00C71726 /* CourseDetailsViewController.swift */,
 				03C19D471FD0F8FB00F5ABF8 /* SectionDetailsViewController.swift */,
 				03C19D4B1FD1205F00F5ABF8 /* RMPViewController.swift */,
+			);
+			path = "Course Search";
+			sourceTree = "<group>";
+		};
+		0378E6521FD6763900A12E74 /* Course Requirements */ = {
+			isa = PBXGroup;
+			children = (
 				037083021FCF720F0064F7B2 /* SelectFacultyViewController.swift */,
 				037083061FCF9CC70064F7B2 /* SelectDepartmentViewController.swift */,
 				03C19D451FCFE92300F5ABF8 /* SelectOptionViewController.swift */,
 				03C19D3F1FCFE7BC00F5ABF8 /* AcademicRequirementsViewController.swift */,
-				03BB20861FD4EE8800A5010C /* CourseScheduleViewController.swift */,
-				03C19D401FCFE7BC00F5ABF8 /* EmailViewController.swift */,
-				03C19D411FCFE7BC00F5ABF8 /* LearnViewController.swift */,
+				037083041FCF87AD0064F7B2 /* AcademicRequirementsData.swift */,
 			);
-			path = "View Controller";
+			path = "Course Requirements";
+			sourceTree = "<group>";
+		};
+		0378E6531FD6766100A12E74 /* Course Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				03BB20861FD4EE8800A5010C /* CourseScheduleViewController.swift */,
+				03BB20871FD4EE8800A5010C /* CustomCell.swift */,
+			);
+			path = "Course Schedule";
 			sourceTree = "<group>";
 		};
 		03BB20901FD4F1D000A5010C /* Frameworks */ = {
@@ -204,11 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				03E6E2211FBD2C2D00C71726 /* WatSwift */,
-				03105D631FD645E10090F320 /* View Controller */,
-				03C19D491FD118F300F5ABF8 /* SectionClass.swift */,
-				037083041FCF87AD0064F7B2 /* AcademicRequirementsData.swift */,
-				03BB20871FD4EE8800A5010C /* CustomCell.swift */,
-				0378E64F1FD65AE200A12E74 /* Utilities.swift */,
+				03105D631FD645E10090F320 /* Main */,
 				4C4EA6641F64712D007A118E /* Main.storyboard */,
 				4C4EA6671F64712D007A118E /* Assets.xcassets */,
 				4C4EA6691F64712D007A118E /* LaunchScreen.storyboard */,
