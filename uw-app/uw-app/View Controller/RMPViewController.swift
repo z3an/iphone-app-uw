@@ -8,15 +8,17 @@
 
 import UIKit
 
-class RMFViewController: UIViewController {
-    @IBOutlet weak var RMFWebView: UIWebView!
-
+class RMPViewController: UIViewController {
+    @IBOutlet weak var RMPWebView: UIWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let url = URL(string:"http://www.ratemyprofessors.com/")
-        RMFWebView.loadRequest(URLRequest(url:url!))
+        var instructor: String = SectionDetailsViewController.firstInstructor.replacingOccurrences(of: " ", with: "+")
+        instructor = instructor.replacingOccurrences(of: ",", with: "+")
+        let url = URL(string:"http://www.ratemyprofessors.com/search.jsp?queryoption=HEADER&queryBy=teacherName&schoolName=University+of+Waterloo&schoolID=1490&query=" + instructor)
+        RMPWebView.loadRequest(URLRequest(url:url!))
     }
 
     override func didReceiveMemoryWarning() {

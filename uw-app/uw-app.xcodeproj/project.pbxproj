@@ -10,13 +10,17 @@
 		037083031FCF720F0064F7B2 /* SelectFacultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037083021FCF720F0064F7B2 /* SelectFacultyViewController.swift */; };
 		037083051FCF87AD0064F7B2 /* AcademicRequirementsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037083041FCF87AD0064F7B2 /* AcademicRequirementsData.swift */; };
 		037083071FCF9CC70064F7B2 /* SelectDepartmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037083061FCF9CC70064F7B2 /* SelectDepartmentViewController.swift */; };
+		0378E6501FD65AE200A12E74 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0378E64F1FD65AE200A12E74 /* Utilities.swift */; };
+		03BB20881FD4EE8800A5010C /* CourseScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB20861FD4EE8800A5010C /* CourseScheduleViewController.swift */; };
+		03BB20891FD4EE8800A5010C /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB20871FD4EE8800A5010C /* CustomCell.swift */; };
+		03BB20921FD4F1D000A5010C /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BB20911FD4F1D000A5010C /* JTAppleCalendar.framework */; };
 		03C19D421FCFE7BC00F5ABF8 /* AcademicRequirementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19D3F1FCFE7BC00F5ABF8 /* AcademicRequirementsViewController.swift */; };
 		03C19D431FCFE7BC00F5ABF8 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19D401FCFE7BC00F5ABF8 /* EmailViewController.swift */; };
 		03C19D441FCFE7BC00F5ABF8 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19D411FCFE7BC00F5ABF8 /* LearnViewController.swift */; };
 		03C19D461FCFE92300F5ABF8 /* SelectOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19D451FCFE92300F5ABF8 /* SelectOptionViewController.swift */; };
 		03C19D481FD0F8FB00F5ABF8 /* SectionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19D471FD0F8FB00F5ABF8 /* SectionDetailsViewController.swift */; };
 		03C19D4A1FD118F300F5ABF8 /* SectionClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19D491FD118F300F5ABF8 /* SectionClass.swift */; };
-		03C19D4C1FD1205F00F5ABF8 /* RMFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19D4B1FD1205F00F5ABF8 /* RMFViewController.swift */; };
+		03C19D4C1FD1205F00F5ABF8 /* RMPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19D4B1FD1205F00F5ABF8 /* RMPViewController.swift */; };
 		03E6E2041FBBF93B00C71726 /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2031FBBF93B00C71726 /* CourseDetailsViewController.swift */; };
 		03E6E2221FBD2C2D00C71726 /* WatSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2081FBD2C2D00C71726 /* WatSwift.swift */; };
 		03E6E2231FBD2C2D00C71726 /* WatBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2091FBD2C2D00C71726 /* WatBase.swift */; };
@@ -54,13 +58,17 @@
 		037083021FCF720F0064F7B2 /* SelectFacultyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectFacultyViewController.swift; sourceTree = "<group>"; };
 		037083041FCF87AD0064F7B2 /* AcademicRequirementsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicRequirementsData.swift; sourceTree = "<group>"; };
 		037083061FCF9CC70064F7B2 /* SelectDepartmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDepartmentViewController.swift; sourceTree = "<group>"; };
+		0378E64F1FD65AE200A12E74 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		03BB20861FD4EE8800A5010C /* CourseScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseScheduleViewController.swift; sourceTree = "<group>"; };
+		03BB20871FD4EE8800A5010C /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		03BB20911FD4F1D000A5010C /* JTAppleCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JTAppleCalendar.framework; path = Carthage/Build/iOS/JTAppleCalendar.framework; sourceTree = "<group>"; };
 		03C19D3F1FCFE7BC00F5ABF8 /* AcademicRequirementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicRequirementsViewController.swift; sourceTree = "<group>"; };
 		03C19D401FCFE7BC00F5ABF8 /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		03C19D411FCFE7BC00F5ABF8 /* LearnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
 		03C19D451FCFE92300F5ABF8 /* SelectOptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectOptionViewController.swift; sourceTree = "<group>"; };
 		03C19D471FD0F8FB00F5ABF8 /* SectionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionDetailsViewController.swift; sourceTree = "<group>"; };
 		03C19D491FD118F300F5ABF8 /* SectionClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionClass.swift; sourceTree = "<group>"; };
-		03C19D4B1FD1205F00F5ABF8 /* RMFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMFViewController.swift; sourceTree = "<group>"; };
+		03C19D4B1FD1205F00F5ABF8 /* RMPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMPViewController.swift; sourceTree = "<group>"; };
 		03E6E2031FBBF93B00C71726 /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
 		03E6E2081FBD2C2D00C71726 /* WatSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.swift; sourceTree = "<group>"; };
 		03E6E2091FBD2C2D00C71726 /* WatBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatBase.swift; sourceTree = "<group>"; };
@@ -101,12 +109,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03BB20921FD4F1D000A5010C /* JTAppleCalendar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03105D631FD645E10090F320 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4C4EA6621F64712D007A118E /* MainViewController.swift */,
+				03F185BC1F85DA7100F9D4D2 /* CourseSearchViewController.swift */,
+				03E6E2031FBBF93B00C71726 /* CourseDetailsViewController.swift */,
+				03C19D471FD0F8FB00F5ABF8 /* SectionDetailsViewController.swift */,
+				03C19D4B1FD1205F00F5ABF8 /* RMPViewController.swift */,
+				037083021FCF720F0064F7B2 /* SelectFacultyViewController.swift */,
+				037083061FCF9CC70064F7B2 /* SelectDepartmentViewController.swift */,
+				03C19D451FCFE92300F5ABF8 /* SelectOptionViewController.swift */,
+				03C19D3F1FCFE7BC00F5ABF8 /* AcademicRequirementsViewController.swift */,
+				03BB20861FD4EE8800A5010C /* CourseScheduleViewController.swift */,
+				03C19D401FCFE7BC00F5ABF8 /* EmailViewController.swift */,
+				03C19D411FCFE7BC00F5ABF8 /* LearnViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		03BB20901FD4F1D000A5010C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03BB20911FD4F1D000A5010C /* JTAppleCalendar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		03E6E21E1FBD2C2D00C71726 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,9 +175,9 @@
 			children = (
 				03E6E2081FBD2C2D00C71726 /* WatSwift.swift */,
 				03E6E2091FBD2C2D00C71726 /* WatBase.swift */,
-				03E6E21E1FBD2C2D00C71726 /* APIs */,
 				03E6E21F1FBD2C2D00C71726 /* Response.swift */,
 				03E6E2201FBD2C2D00C71726 /* JSON.swift */,
+				03E6E21E1FBD2C2D00C71726 /* APIs */,
 			);
 			name = WatSwift;
 			path = ../WatSwift/WatSwift;
@@ -152,6 +188,7 @@
 			children = (
 				4C4EA65F1F64712D007A118E /* uw-app */,
 				4C4EA65E1F64712D007A118E /* Products */,
+				03BB20901FD4F1D000A5010C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,23 +204,15 @@
 			isa = PBXGroup;
 			children = (
 				03E6E2211FBD2C2D00C71726 /* WatSwift */,
-				4C4EA6601F64712D007A118E /* AppDelegate.swift */,
+				03105D631FD645E10090F320 /* View Controller */,
 				03C19D491FD118F300F5ABF8 /* SectionClass.swift */,
-				4C4EA6621F64712D007A118E /* MainViewController.swift */,
-				03F185BC1F85DA7100F9D4D2 /* CourseSearchViewController.swift */,
-				03E6E2031FBBF93B00C71726 /* CourseDetailsViewController.swift */,
-				03C19D471FD0F8FB00F5ABF8 /* SectionDetailsViewController.swift */,
-				03C19D4B1FD1205F00F5ABF8 /* RMFViewController.swift */,
-				037083021FCF720F0064F7B2 /* SelectFacultyViewController.swift */,
-				037083061FCF9CC70064F7B2 /* SelectDepartmentViewController.swift */,
-				03C19D451FCFE92300F5ABF8 /* SelectOptionViewController.swift */,
-				03C19D3F1FCFE7BC00F5ABF8 /* AcademicRequirementsViewController.swift */,
 				037083041FCF87AD0064F7B2 /* AcademicRequirementsData.swift */,
-				03C19D401FCFE7BC00F5ABF8 /* EmailViewController.swift */,
-				03C19D411FCFE7BC00F5ABF8 /* LearnViewController.swift */,
+				03BB20871FD4EE8800A5010C /* CustomCell.swift */,
+				0378E64F1FD65AE200A12E74 /* Utilities.swift */,
 				4C4EA6641F64712D007A118E /* Main.storyboard */,
 				4C4EA6671F64712D007A118E /* Assets.xcassets */,
 				4C4EA6691F64712D007A118E /* LaunchScreen.storyboard */,
+				4C4EA6601F64712D007A118E /* AppDelegate.swift */,
 				4C4EA66C1F64712D007A118E /* Info.plist */,
 			);
 			path = "uw-app";
@@ -199,6 +228,7 @@
 				4C4EA6591F64712D007A118E /* Sources */,
 				4C4EA65A1F64712D007A118E /* Frameworks */,
 				4C4EA65B1F64712D007A118E /* Resources */,
+				03BB20931FD4F1F600A5010C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -256,6 +286,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03BB20931FD4F1F600A5010C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/JTAppleCalendar.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4C4EA6591F64712D007A118E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -269,6 +316,7 @@
 				03C19D4A1FD118F300F5ABF8 /* SectionClass.swift in Sources */,
 				03C19D441FCFE7BC00F5ABF8 /* LearnViewController.swift in Sources */,
 				4C4EA6631F64712D007A118E /* MainViewController.swift in Sources */,
+				0378E6501FD65AE200A12E74 /* Utilities.swift in Sources */,
 				03C19D481FD0F8FB00F5ABF8 /* SectionDetailsViewController.swift in Sources */,
 				03E6E2041FBBF93B00C71726 /* CourseDetailsViewController.swift in Sources */,
 				03E6E22E1FBD2C2D00C71726 /* WatSwift.News.swift in Sources */,
@@ -283,13 +331,15 @@
 				03E6E2381FBD2C2D00C71726 /* Response.swift in Sources */,
 				03E6E2261FBD2C2D00C71726 /* WatSwift.Blogs.swift in Sources */,
 				03E6E2391FBD2C2D00C71726 /* JSON.swift in Sources */,
+				03BB20891FD4EE8800A5010C /* CustomCell.swift in Sources */,
 				03E6E2361FBD2C2D00C71726 /* WatSwift.Transit.swift in Sources */,
 				03E6E22D1FBD2C2D00C71726 /* WatSwift.FoodServices.swift in Sources */,
 				03E6E22F1FBD2C2D00C71726 /* WatSwift.Opportunities.swift in Sources */,
 				03E6E2291FBD2C2D00C71726 /* WatSwift.Courses.swift in Sources */,
+				03BB20881FD4EE8800A5010C /* CourseScheduleViewController.swift in Sources */,
 				03E6E2371FBD2C2D00C71726 /* WatSwift.Weather.swift in Sources */,
 				03E6E2351FBD2C2D00C71726 /* WatSwift.Terms.swift in Sources */,
-				03C19D4C1FD1205F00F5ABF8 /* RMFViewController.swift in Sources */,
+				03C19D4C1FD1205F00F5ABF8 /* RMPViewController.swift in Sources */,
 				03E6E22C1FBD2C2D00C71726 /* WatSwift.Feds.swift in Sources */,
 				03C19D421FCFE7BC00F5ABF8 /* AcademicRequirementsViewController.swift in Sources */,
 				03E6E22B1FBD2C2D00C71726 /* WatSwift.Events.swift in Sources */,
@@ -422,9 +472,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "uw-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zepengan.uw-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.guyuli.uw-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -436,9 +490,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "uw-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zepengan.uw-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.guyuli.uw-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;

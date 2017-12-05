@@ -648,16 +648,19 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpc-1s-rCW">
-                                <rect key="frame" x="177" y="288" width="178" height="30"/>
+                                <rect key="frame" x="206" y="297" width="178" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Go to RateMyProfessors"/>
                                 <connections>
-                                    <action selector="RMFAction:" destination="rcq-YQ-MJd" eventType="touchUpInside" id="obI-X0-CoM"/>
+                                    <action selector="RMPAction:" destination="rcq-YQ-MJd" eventType="touchUpInside" id="Fs2-ZC-HId"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oB-BP-TU8">
-                                <rect key="frame" x="109" y="402" width="179" height="101"/>
+                                <rect key="frame" x="74" y="500" width="266" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Add to Your Schedule"/>
                                 <connections>
                                     <action selector="AddScheduleAction:" destination="rcq-YQ-MJd" eventType="touchUpInside" id="F87-oF-gEY"/>
@@ -667,11 +670,12 @@
                         <color key="backgroundColor" red="0.26052902919999998" green="0.26052902919999998" blue="0.26052902919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="RMFButton" destination="hpc-1s-rCW" id="VXU-w6-ruo"/>
                         <outlet property="addScheduleButton" destination="0oB-BP-TU8" id="Lfs-hD-Poq"/>
                         <outlet property="classTimeTextBox" destination="WYt-Hu-nAn" id="hqK-sC-J1e"/>
                         <outlet property="instructorTextBox" destination="0EQ-nr-IV8" id="HEo-1e-AkT"/>
                         <outlet property="locationTextBox" destination="tyq-YX-zS3" id="aXK-Cp-yJZ"/>
-                        <segue destination="JWQ-E0-sO9" kind="show" identifier="rmf" id="53d-yR-s7g"/>
+                        <segue destination="JWQ-E0-sO9" kind="show" identifier="rmp" id="3xw-37-98B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iFF-U4-dS0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -681,7 +685,7 @@
         <!--Rate My Professors-->
         <scene sceneID="NwY-hT-iav">
             <objects>
-                <viewController title="Rate My Professors" id="JWQ-E0-sO9" customClass="RMFViewController" customModule="uw_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Rate My Professors" id="JWQ-E0-sO9" customClass="RMPViewController" customModule="uw_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Xc-by-kpj"/>
                         <viewControllerLayoutGuide type="bottom" id="OkK-f9-KTO"/>
@@ -690,11 +694,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7n-JM-4kQ">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7n-JM-4kQ" userLabel="RMPWeb View">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <outlet property="delegate" destination="JWQ-E0-sO9" id="yWR-gI-TNM"/>
+                                    <outlet property="delegate" destination="JWQ-E0-sO9" id="kpj-XR-6lG"/>
                                 </connections>
                             </webView>
                         </subviews>
@@ -707,7 +711,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="RMFWebView" destination="z7n-JM-4kQ" id="Tl4-1l-RQa"/>
+                        <outlet property="RMPWebView" destination="z7n-JM-4kQ" id="TAE-Sr-xG6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YbY-2k-hTc" userLabel="First Responder" sceneMemberID="firstResponder"/>
