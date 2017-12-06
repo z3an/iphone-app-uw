@@ -37,7 +37,7 @@ let weekdayTranslate:[Int:String] = [
 ]
 
 
-class CourseScheduleViewController: UIViewController {
+class CourseScheduleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     class sectionClassSimple{
         var courseCatalog = ""
         var courseSection = ""
@@ -48,10 +48,10 @@ class CourseScheduleViewController: UIViewController {
         var sectionInstructor = ""
     }
     
-    @IBOutlet weak var courseScheduleText: UITextView!
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var month: UILabel!
+    @IBOutlet weak var sectionTable: UITableView!
     
     let outsideMonthColor = UIColor(colorWithHexValue: 0x584a66)
     let monthColor = UIColor.white
@@ -65,6 +65,8 @@ class CourseScheduleViewController: UIViewController {
     var wednesdayClass = [sectionClassSimple]()
     var thursdayClass = [sectionClassSimple]()
     var fridayClass = [sectionClassSimple]()
+    
+    var sectionList = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +90,9 @@ class CourseScheduleViewController: UIViewController {
         self.sectionClassList.append(TestData2)
 
         // Do any additional setup after loading the view.
-        courseScheduleText.text = ""
+        sectionTable.layer.cornerRadius = 10
+        sectionTable.clipsToBounds = true
+        //courseScheduleText.text = ""
         setupCalendarView()
         
         //generate list
@@ -180,6 +184,7 @@ class CourseScheduleViewController: UIViewController {
     }
     
     func handleCellSelected(view:JTAppleCell?, cellState: CellState){
+        sectionTable.separatorStyle = UITableViewCellSeparatorStyle.singleLine
         guard let validCell = view as? CustomCell else {return}
         if validCell.isSelected{
             validCell.selectedView.isHidden = false
@@ -194,7 +199,8 @@ class CourseScheduleViewController: UIViewController {
             let myComponents = myCalendar.components(.weekday, from: selectDate!)
             let weekDay = myComponents.weekday
             var contents = [sectionClassSimple]()
-            courseScheduleText.text = ""
+            //courseScheduleText.text = ""
+            sectionList.removeAll()
             if weekdayTranslate[weekDay!] == "Monday"{
                 contents = self.mondayClass
             }
@@ -215,37 +221,56 @@ class CourseScheduleViewController: UIViewController {
             }
             for content in contents{
                 //let sectionTextBox = UITextView(frame: CGRect(x: 0.0, y: 0.0, width: 400.0, height: 100.0))
-                let sectionTextBox = UITextView()
-                sectionTextBox.frame.size.width = 400.0
-                sectionTextBox.frame.size.height = 100.0
-//                let constraintTop = NSLayoutConstraint(item: sectionTextBox,
-//                                                       attribute: NSLayoutAttribute.top,
-//                                                       relatedBy: NSLayoutRelation.equal,
-//                                                       toItem: sectionTextBox,
-//                                                       attribute: NSLayoutAttribute.top,
-//                                                       multiplier: 1.0,
-//                                                       constant: 10)
-//                sectionTextBox.addConstraint(constraintTop)
-                //sectionTextBox.translatesAutoresizingMaskIntoConstraints = true
-                //sectionTextBox.sizeToFit()
-                sectionTextBox.isScrollEnabled = false
+                //let sectionTextBox = UITextView()
+                //sectionTextBox.frame.size.width = 400.0
+                //sectionTextBox.frame.size.height = 100.0
+                //sectionTextBox.isScrollEnabled = false
                 //self.automaticallyAdjustsScrollViewInsets = false
                 //sectionTextBox.center = courseScheduleText.center
-                sectionTextBox.textAlignment = NSTextAlignment.justified
-                sectionTextBox.text = content.courseCatalog + " - " + content.courseSection + "\n" + content.courseTitle + "\n" + content.lectureString + "\n" + content.sectionTime + "\n" + content.sectionLocation + "\n" + content.sectionInstructor + "\n"
-                sectionTextBox.font = UIFont(name: "NameOfTheFont", size: 20)
-                sectionTextBox.layer.cornerRadius = 10
-                sectionTextBox.clipsToBounds = true
-                sectionTextBox.textColor = UIColor.black
-                sectionTextBox.backgroundColor = UIColor.yellow
+                //sectionTextBox.textAlignment = NSTextAlignment.justified
+                //sectionTextBox.font = UIFont(name: "NameOfTheFont", size: 20)
+                //sectionTextBox.layer.cornerRadius = 10
+                //sectionTextBox.clipsToBounds = true
+                //sectionTextBox.textColor = UIColor.black
+                //sectionTextBox.backgroundColor = UIColor.yellow
                 //print (sectionTextBox.text)
-                //self.view.addSubview(sectionTextBox)
-                courseScheduleText.addSubview(sectionTextBox)
+                //courseScheduleText.addSubview(sectionTextBox)
+                sectionList.append(content.courseCatalog + " - " + content.courseSection + "\n" + content.courseTitle + "\n" + content.lectureString + "\n" + content.sectionTime + "\n" + content.sectionLocation + "\n" + content.sectionInstructor + "\n")
+                self.sectionTable.reloadData()
             }
         }else{
             validCell.selectedView.isHidden = true
         }
     }
+    
+    // section table
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sectionList.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 150.0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let sectionCell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "sectionCell")
+        sectionCell.textLabel?.text = sectionList[indexPath.row]
+        sectionCell.textLabel?.numberOfLines = 0
+        sectionCell.textLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
+        return sectionCell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //performSegue(withIdentifier: "section_details", sender: self)
+    }
+    
+    // add new event action
+    @IBAction func AddNewEventAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "add_new_event", sender: self)
+    }
+    
     func setupViewsOfCalendar(from visibleDates: DateSegmentInfo){
         let date = visibleDates.monthDates.first!.date
         self.formatter.dateFormat = "yyyy"

@@ -21,6 +21,7 @@
 		03C19D481FD0F8FB00F5ABF8 /* SectionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19D471FD0F8FB00F5ABF8 /* SectionDetailsViewController.swift */; };
 		03C19D4A1FD118F300F5ABF8 /* SectionClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19D491FD118F300F5ABF8 /* SectionClass.swift */; };
 		03C19D4C1FD1205F00F5ABF8 /* RMPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19D4B1FD1205F00F5ABF8 /* RMPViewController.swift */; };
+		03E102891FD7866500AF0A63 /* AddNewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E102881FD7866500AF0A63 /* AddNewEventViewController.swift */; };
 		03E6E2041FBBF93B00C71726 /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2031FBBF93B00C71726 /* CourseDetailsViewController.swift */; };
 		03E6E2221FBD2C2D00C71726 /* WatSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2081FBD2C2D00C71726 /* WatSwift.swift */; };
 		03E6E2231FBD2C2D00C71726 /* WatBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2091FBD2C2D00C71726 /* WatBase.swift */; };
@@ -69,6 +70,7 @@
 		03C19D471FD0F8FB00F5ABF8 /* SectionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionDetailsViewController.swift; sourceTree = "<group>"; };
 		03C19D491FD118F300F5ABF8 /* SectionClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionClass.swift; sourceTree = "<group>"; };
 		03C19D4B1FD1205F00F5ABF8 /* RMPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMPViewController.swift; sourceTree = "<group>"; };
+		03E102881FD7866500AF0A63 /* AddNewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEventViewController.swift; sourceTree = "<group>"; };
 		03E6E2031FBBF93B00C71726 /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
 		03E6E2081FBD2C2D00C71726 /* WatSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatSwift.swift; sourceTree = "<group>"; };
 		03E6E2091FBD2C2D00C71726 /* WatBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatBase.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				03BB20861FD4EE8800A5010C /* CourseScheduleViewController.swift */,
+				03E102881FD7866500AF0A63 /* AddNewEventViewController.swift */,
 				03BB20871FD4EE8800A5010C /* CustomCell.swift */,
 			);
 			path = "Course Schedule";
@@ -335,6 +338,7 @@
 			files = (
 				03F185BD1F85DA7100F9D4D2 /* CourseSearchViewController.swift in Sources */,
 				037083031FCF720F0064F7B2 /* SelectFacultyViewController.swift in Sources */,
+				03E102891FD7866500AF0A63 /* AddNewEventViewController.swift in Sources */,
 				037083071FCF9CC70064F7B2 /* SelectDepartmentViewController.swift in Sources */,
 				03E6E2251FBD2C2D00C71726 /* WatSwift.Awards.swift in Sources */,
 				03E6E2331FBD2C2D00C71726 /* WatSwift.Server.swift in Sources */,
