@@ -38,6 +38,16 @@ let weekdayTranslate:[Int:String] = [
 
 
 class CourseScheduleViewController: UIViewController {
+    class sectionClassSimple{
+        var courseCatalog = ""
+        var courseSection = ""
+        var lectureString = "LEC - Lecture"
+        var courseTitle = ""
+        var sectionTime = ""
+        var sectionLocation = ""
+        var sectionInstructor = ""
+    }
+    
     @IBOutlet weak var courseScheduleText: UITextView!
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var year: UILabel!
@@ -47,38 +57,40 @@ class CourseScheduleViewController: UIViewController {
     let monthColor = UIColor.white
     let selectedMonthColor = UIColor(colorWithHexValue: 0x3a294b)
     let currentDateSelectedViewColor = UIColor(colorWithHexValue: 0x4e3f5d)
-    var sectionClassList = [SectionClass]()
+    var sectionClassList = ViewController.addedSection
     
     let formatter = DateFormatter()
-    var mondayClass = [String]()
-    var tuesdayClass = [String]()
-    var wednesdayClass = [String]()
-    var thursdayClass = [String]()
-    var fridayClass = [String]()
+    var mondayClass = [sectionClassSimple]()
+    var tuesdayClass = [sectionClassSimple]()
+    var wednesdayClass = [sectionClassSimple]()
+    var thursdayClass = [sectionClassSimple]()
+    var fridayClass = [sectionClassSimple]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // for testing:
+        let TestData1 = SectionClass()
+        TestData1.courseCatalog = "STAT 340"
+        TestData1.courseTitle = "R language"
+        TestData1.sectionNumber = "002"
+        TestData1.datetime = ["08:30-09:50MWF", "14:30-15:50TTh"]
+        TestData1.location = ["STC - Science Teaching Complex 0050", "STC - Science Teaching Complex 0060"]
+        TestData1.instructor = [["Paul,An", "Rain,Li"],["Zepeng,An"]]
+        let TestData2 = SectionClass()
+        TestData2.courseCatalog = "MATH 237"
+        TestData2.courseTitle = "Calculus"
+        TestData2.sectionNumber = "001"
+        TestData2.datetime = ["10:30-11:50MWF", "16:30-17:50TTh"]
+        TestData2.location = ["DC - Device Center 1350", "DC - Device Center 1351"]
+        TestData2.instructor = [["Paul,An", "Rain,Li"],["Zepeng,An"]]
+        self.sectionClassList.append(TestData1)
+        self.sectionClassList.append(TestData2)
+
         // Do any additional setup after loading the view.
         courseScheduleText.text = ""
         setupCalendarView()
         
-        // This is the test data
-        var TestData1 = SectionClass()
-        TestData1.courseCatalog = "STAT 340"
-        TestData1.courseTitle = "R language"
-        TestData1.sectionNumber = "002"
-        TestData1.datetime = ["Tuesday 8:30-9:50AM", "Thursday 8:30-9:50AM"]
-        TestData1.location = ["STC - Science Teaching Complex 0050", "STC - Science Teaching Complex 0060"]
-        TestData1.instructor = [["paul", "rain"],["paul"]]
-        var TestData2 = SectionClass()
-        TestData2.courseCatalog = "MATH 237"
-        TestData2.courseTitle = "Calculus"
-        TestData2.sectionNumber = "001"
-        TestData2.datetime = ["Monday 8:30-9:50AM", "Wednesday 8:30-9:50AM"]
-        TestData2.location = ["DC - Device Center 1350", "DC - Device Center 1351"]
-        TestData2.instructor = [["paul", "rain"],["paul"]]
-        self.sectionClassList.append(TestData1)
-        self.sectionClassList.append(TestData2)
         //generate list
         generateScheduleBasedOnList()
         
@@ -95,42 +107,62 @@ class CourseScheduleViewController: UIViewController {
     }
     func generateScheduleBasedOnList(){
         for sectionClass in self.sectionClassList{
+            var locationList = sectionClass.location
             var sectionClassDateTimeList = sectionClass.datetime
-            var content = sectionClass.courseCatalog + " - " + sectionClass.sectionNumber + "\n"
-            content = content + sectionClass.courseTitle + "\n"
-            content = content + "LEC - Lecture" + "\n"
+            var instructorList = sectionClass.instructor
             for index in 0...(sectionClassDateTimeList.count-1){
-                var sectionClassDateTime = sectionClassDateTimeList[index]
-                var sectionClassDateTimeArray = sectionClassDateTime.components(separatedBy: " ")
-                var weekday = sectionClassDateTimeArray[0]
-                var time = sectionClassDateTimeArray[1]
-                content = content + time + "\n"
-                content = content + sectionClass.location[index] + "\n"
-                var instructors = sectionClass.instructor[index]
-                for instructor in instructors{
-                    content = content + instructor + " "
-                }
-                content = content + "\n"
-                if weekday == "Monday"{
-                    self.mondayClass.append(content)
-                }
-                else if weekday == "Tuesday"{
-                    self.tuesdayClass.append(content)
-                }
-                else if weekday == "Wednesday"{
-                    self.wednesdayClass.append(content)
-                }
-                else if weekday == "Thursday"{
-                    self.thursdayClass.append(content)
-                }
-                else if weekday == "Friday"{
-                    self.fridayClass.append(content)
-                }
-                else{
-                    print("Invalid date")
+                let sectionClassDateTime = sectionClassDateTimeList[index]
+                let start = sectionClassDateTime.index(sectionClassDateTime.startIndex, offsetBy:11)
+                let weekdates = sectionClassDateTime[start..<sectionClassDateTime.endIndex]
+                let classtimeStart = sectionClassDateTime.index(sectionClassDateTime.startIndex, offsetBy: 11)
+                let classtime = sectionClassDateTime.prefix(upTo: classtimeStart)
+                for i in weekdates.indices{
+                    let courseSectionSimple = sectionClassSimple()
+                    //get course section time
+                    courseSectionSimple.sectionTime = String(classtime)
+                    //get courseCatalog
+                    courseSectionSimple.courseCatalog = sectionClass.courseCatalog
+                    //get course section number
+                    courseSectionSimple.courseSection = sectionClass.sectionNumber
+                    //get course title
+                    courseSectionSimple.courseTitle = sectionClass.courseTitle
+                    courseSectionSimple.sectionLocation = locationList[index]
+                    let instructors = instructorList[index]
+                    for instructorsElement in instructors{
+                        courseSectionSimple.sectionInstructor = courseSectionSimple.sectionInstructor + instructorsElement + " "
+                    }
+                    if String(weekdates[i]) == "M"{
+                        //let mondaySection = content + classtime + "\n" + classLocation + "\n" + instructor + "\n"
+                        self.mondayClass.append(courseSectionSimple)
+                    }
+                    else if String(weekdates[i]) == "T" && String(weekdates[weekdates.index(after:i)]) == "h"{
+                        //var thursdaySection = content + classtime + "\n" + classLocation + "\n" + instructor + "\n"
+                        self.thursdayClass.append(courseSectionSimple)
+                    }
+                    else if String(weekdates[i]) == "h"{continue}
+                    else if String(weekdates[i]) == "T"{
+                        //var tuesdaySection = content + classtime + "\n" + classLocation + "\n" + instructor + "\n"
+                        self.tuesdayClass.append(courseSectionSimple)
+                    }
+                    else if String(weekdates[i]) == "W"{
+                        //var wednesdaySection = content + classtime + "\n" + classLocation + "\n" + instructor + "\n"
+                        self.wednesdayClass.append(courseSectionSimple)
+                    }
+                    else if String(weekdates[i]) == "F"{
+                        //var fridaySection = content + classtime + "\n" + classLocation + "\n" + instructor + "\n"
+                        self.fridayClass.append(courseSectionSimple)
+                    }
+                    else{
+                        print("Invalid weekdate")
+                    }
                 }
             }
         }
+        self.mondayClass.sort{ $0.sectionTime < $1.sectionTime }
+        self.tuesdayClass.sort{ $0.sectionTime < $1.sectionTime }
+        self.wednesdayClass.sort{ $0.sectionTime < $1.sectionTime }
+        self.thursdayClass.sort{ $0.sectionTime < $1.sectionTime }
+        self.fridayClass.sort{ $0.sectionTime < $1.sectionTime }
     }
     
     
@@ -161,7 +193,7 @@ class CourseScheduleViewController: UIViewController {
             let myCalendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)!
             let myComponents = myCalendar.components(.weekday, from: selectDate!)
             let weekDay = myComponents.weekday
-            var contents = [String]()
+            var contents = [sectionClassSimple]()
             courseScheduleText.text = ""
             if weekdayTranslate[weekDay!] == "Monday"{
                 contents = self.mondayClass
@@ -182,7 +214,33 @@ class CourseScheduleViewController: UIViewController {
                 print("Invalid date")
             }
             for content in contents{
-                courseScheduleText.text = courseScheduleText.text + content
+                //let sectionTextBox = UITextView(frame: CGRect(x: 0.0, y: 0.0, width: 400.0, height: 100.0))
+                let sectionTextBox = UITextView()
+                sectionTextBox.frame.size.width = 400.0
+                sectionTextBox.frame.size.height = 100.0
+//                let constraintTop = NSLayoutConstraint(item: sectionTextBox,
+//                                                       attribute: NSLayoutAttribute.top,
+//                                                       relatedBy: NSLayoutRelation.equal,
+//                                                       toItem: sectionTextBox,
+//                                                       attribute: NSLayoutAttribute.top,
+//                                                       multiplier: 1.0,
+//                                                       constant: 10)
+//                sectionTextBox.addConstraint(constraintTop)
+                //sectionTextBox.translatesAutoresizingMaskIntoConstraints = true
+                //sectionTextBox.sizeToFit()
+                sectionTextBox.isScrollEnabled = false
+                //self.automaticallyAdjustsScrollViewInsets = false
+                //sectionTextBox.center = courseScheduleText.center
+                sectionTextBox.textAlignment = NSTextAlignment.justified
+                sectionTextBox.text = content.courseCatalog + " - " + content.courseSection + "\n" + content.courseTitle + "\n" + content.lectureString + "\n" + content.sectionTime + "\n" + content.sectionLocation + "\n" + content.sectionInstructor + "\n"
+                sectionTextBox.font = UIFont(name: "NameOfTheFont", size: 20)
+                sectionTextBox.layer.cornerRadius = 10
+                sectionTextBox.clipsToBounds = true
+                sectionTextBox.textColor = UIColor.black
+                sectionTextBox.backgroundColor = UIColor.yellow
+                //print (sectionTextBox.text)
+                //self.view.addSubview(sectionTextBox)
+                courseScheduleText.addSubview(sectionTextBox)
             }
         }else{
             validCell.selectedView.isHidden = true
@@ -203,7 +261,7 @@ class CourseScheduleViewController: UIViewController {
 }
 
 extension CourseScheduleViewController: JTAppleCalendarViewDataSource{
-
+    
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         formatter.dateFormat = "yyyy MM dd"
         formatter.timeZone = Calendar.current.timeZone
