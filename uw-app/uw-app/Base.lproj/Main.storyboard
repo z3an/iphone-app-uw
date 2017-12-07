@@ -1187,13 +1187,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3B1-u0-e7R">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3B1-u0-e7R">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" red="0.26052902919999998" green="0.26052902919999998" blue="0.26052902919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3B1-u0-e7R" firstAttribute="top" secondItem="yEx-zl-wju" secondAttribute="bottom" constant="-64" id="EzC-xa-cY2"/>
+                            <constraint firstItem="8XT-gd-aK5" firstAttribute="top" secondItem="3B1-u0-e7R" secondAttribute="bottom" id="cDv-cg-1Qs"/>
+                            <constraint firstItem="3B1-u0-e7R" firstAttribute="leading" secondItem="ahd-cY-sfU" secondAttribute="leading" id="dU7-IX-cma"/>
+                            <constraint firstAttribute="trailing" secondItem="3B1-u0-e7R" secondAttribute="trailing" id="gZY-wY-1uR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="WatCard" id="jQs-mm-SMO"/>
                     <connections>
@@ -1216,17 +1221,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sqh-Gq-uv4">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sqh-Gq-uv4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" red="0.26052902919999998" green="0.26052902919999998" blue="0.26052902919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fYB-Wo-Zzh" firstAttribute="top" secondItem="sqh-Gq-uv4" secondAttribute="bottom" id="360-4q-EvR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sqh-Gq-uv4" secondAttribute="trailing" id="9Xi-R0-Hmf"/>
-                            <constraint firstItem="sqh-Gq-uv4" firstAttribute="leading" secondItem="EQa-0I-KLt" secondAttribute="leadingMargin" id="Qc8-2D-Ecp"/>
-                            <constraint firstItem="sqh-Gq-uv4" firstAttribute="top" secondItem="AGP-97-G2W" secondAttribute="bottom" id="xwI-M4-Hhv"/>
+                            <constraint firstItem="sqh-Gq-uv4" firstAttribute="top" secondItem="AGP-97-G2W" secondAttribute="bottom" constant="-64" id="TMa-kW-ZT6"/>
+                            <constraint firstItem="fYB-Wo-Zzh" firstAttribute="top" secondItem="sqh-Gq-uv4" secondAttribute="bottom" id="Thf-PT-ojD"/>
+                            <constraint firstItem="sqh-Gq-uv4" firstAttribute="leading" secondItem="EQa-0I-KLt" secondAttribute="leading" id="cER-YU-piG"/>
+                            <constraint firstAttribute="trailing" secondItem="sqh-Gq-uv4" secondAttribute="trailing" id="kVE-ez-IwT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Library" id="WyG-4A-ALR"/>
@@ -1260,7 +1265,7 @@
         <!--Advisor-->
         <scene sceneID="dLh-u0-fwT">
             <objects>
-                <viewController id="x34-9z-WkV" customClass="advisroViewController" customModule="uw_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="x34-9z-WkV" customClass="AdvisroViewController" customModule="uw_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="j7W-yo-0gv"/>
                         <viewControllerLayoutGuide type="bottom" id="jGG-DQ-bmh"/>
@@ -1269,13 +1274,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M7t-ri-kBK">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M7t-ri-kBK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" red="0.26052902919999998" green="0.26052902919999998" blue="0.26052902919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jGG-DQ-bmh" firstAttribute="top" secondItem="M7t-ri-kBK" secondAttribute="bottom" id="0PQ-gW-cnq"/>
+                            <constraint firstItem="M7t-ri-kBK" firstAttribute="top" secondItem="j7W-yo-0gv" secondAttribute="bottom" constant="-64" id="eo8-Yh-ze9"/>
+                            <constraint firstItem="M7t-ri-kBK" firstAttribute="leading" secondItem="g5a-kM-pMF" secondAttribute="leading" id="esB-W9-E1V"/>
+                            <constraint firstAttribute="trailing" secondItem="M7t-ri-kBK" secondAttribute="trailing" id="mFm-EA-gIy"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Advisor" id="Tzg-zf-BTI"/>
                     <connections>
