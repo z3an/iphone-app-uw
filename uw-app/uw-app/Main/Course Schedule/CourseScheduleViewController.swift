@@ -38,15 +38,6 @@ let weekdayTranslate:[Int:String] = [
 
 
 class CourseScheduleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    class sectionClassSimple{
-        var courseCatalog = ""
-        var courseSection = ""
-        var lectureString = "LEC - Lecture"
-        var courseTitle = ""
-        var sectionTime = ""
-        var sectionLocation = ""
-        var sectionInstructor = ""
-    }
     
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var year: UILabel!
