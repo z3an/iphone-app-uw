@@ -35,7 +35,7 @@ class Utilities {
     }
     static func sectionTimeConflict(section: SectionClass) -> Bool
     {
-        var sectionClassList = ViewController.addedSection
+        let sectionClassList = ViewController.addedSection
         var mondayClass = [sectionClassSimple]()
         var tuesdayClass = [sectionClassSimple]()
         var wednesdayClass = [sectionClassSimple]()
@@ -99,7 +99,7 @@ class Utilities {
         thursdayClass.sort{ $0.sectionTime < $1.sectionTime }
         fridayClass.sort{ $0.sectionTime < $1.sectionTime }
         //["09:30-11:30MF"]
-        var selectedSectionTimeList = section.datetime
+        let selectedSectionTimeList = section.datetime
         //get "09:30-11:30MF"
         for selectedSectionTime in selectedSectionTimeList{
             //get 11 index
@@ -121,11 +121,11 @@ class Utilities {
             for i in weekdates.indices{
                 if String(weekdates[i]) == "M"{
                     for mondayclass in mondayClass{
-                        var mondayclassTime = mondayclass.sectionTime
+                        let mondayclassTime = mondayclass.sectionTime
                         let classtimeStart = mondayclassTime.index(mondayclassTime.startIndex, offsetBy: 5)
                         let mondayclassStartTime = mondayclassTime.prefix(upTo: classtimeStart)
                         let classtimeEnd = mondayclassTime.index(mondayclassTime.startIndex, offsetBy: 6)
-                        var mondayclassEndTime = mondayclassTime[classtimeEnd..<mondayclassTime.endIndex]
+                        let mondayclassEndTime = mondayclassTime[classtimeEnd..<mondayclassTime.endIndex]
                         if classtimeEndSelected <= mondayclassStartTime{
                             continue
                         }
@@ -140,11 +140,11 @@ class Utilities {
                 }
                 else if String(weekdates[i]) == "T" && String(weekdates[weekdates.index(after:i)]) == "h"{
                     for thursdayclass in thursdayClass{
-                        var thursdayclassTime = thursdayclass.sectionTime
+                        let thursdayclassTime = thursdayclass.sectionTime
                         let classtimeStart = thursdayclassTime.index(thursdayclassTime.startIndex, offsetBy: 5)
                         let thursdayclassStartTime = thursdayclassTime.prefix(upTo: classtimeStart)
                         let classtimeEnd = thursdayclassTime.index(thursdayclassTime.startIndex, offsetBy: 6)
-                        var thursdayclassEndTime = thursdayclassTime[classtimeEnd..<thursdayclassTime.endIndex]
+                        let thursdayclassEndTime = thursdayclassTime[classtimeEnd..<thursdayclassTime.endIndex]
                         if classtimeEndSelected <= thursdayclassStartTime{
                             continue
                         }
@@ -160,11 +160,11 @@ class Utilities {
                 else if String(weekdates[i]) == "h"{continue}
                 else if String(weekdates[i]) == "T"{
                     for tuesdayclass in tuesdayClass{
-                        var tuesdayclassTime = tuesdayclass.sectionTime
+                        let tuesdayclassTime = tuesdayclass.sectionTime
                         let classtimeStart = tuesdayclassTime.index(tuesdayclassTime.startIndex, offsetBy: 5)
                         let tuesdayclassStartTime = tuesdayclassTime.prefix(upTo: classtimeStart)
                         let classtimeEnd = tuesdayclassTime.index(tuesdayclassTime.startIndex, offsetBy: 6)
-                        var tuesdayclassEndTime = tuesdayclassTime[classtimeEnd..<tuesdayclassTime.endIndex]
+                        let tuesdayclassEndTime = tuesdayclassTime[classtimeEnd..<tuesdayclassTime.endIndex]
                         if classtimeEndSelected <= tuesdayclassStartTime{
                             continue
                         }
@@ -179,11 +179,11 @@ class Utilities {
                 }
                 else if String(weekdates[i]) == "W"{
                     for wednesdayclass in wednesdayClass{
-                        var wednesdayclassTime = wednesdayclass.sectionTime
+                        let wednesdayclassTime = wednesdayclass.sectionTime
                         let classtimeStart = wednesdayclassTime.index(wednesdayclassTime.startIndex, offsetBy: 5)
                         let wednesdayclassStartTime = wednesdayclassTime.prefix(upTo: classtimeStart)
                         let classtimeEnd = wednesdayclassTime.index(wednesdayclassTime.startIndex, offsetBy: 6)
-                        var wednesdayclassEndTime = wednesdayclassTime[classtimeEnd..<wednesdayclassTime.endIndex]
+                        let wednesdayclassEndTime = wednesdayclassTime[classtimeEnd..<wednesdayclassTime.endIndex]
                         if classtimeEndSelected <= wednesdayclassStartTime{
                             continue
                         }
@@ -198,11 +198,11 @@ class Utilities {
                 }
                 else if String(weekdates[i]) == "F"{
                     for fridayclass in fridayClass{
-                        var fridayclassTime = fridayclass.sectionTime
+                        let fridayclassTime = fridayclass.sectionTime
                         let classtimeStart = fridayclassTime.index(fridayclassTime.startIndex, offsetBy: 5)
                         let fridayclassStartTime = fridayclassTime.prefix(upTo: classtimeStart)
                         let classtimeEnd = fridayclassTime.index(fridayclassTime.startIndex, offsetBy: 6)
-                        var fridayclassEndTime = fridayclassTime[classtimeEnd..<fridayclassTime.endIndex]
+                        let fridayclassEndTime = fridayclassTime[classtimeEnd..<fridayclassTime.endIndex]
                         if classtimeEndSelected <= fridayclassStartTime{
                             continue
                         }

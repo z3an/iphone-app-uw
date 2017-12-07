@@ -48,6 +48,9 @@
 		03E6E2381FBD2C2D00C71726 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E21F1FBD2C2D00C71726 /* Response.swift */; };
 		03E6E2391FBD2C2D00C71726 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E6E2201FBD2C2D00C71726 /* JSON.swift */; };
 		03F185BD1F85DA7100F9D4D2 /* CourseSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F185BC1F85DA7100F9D4D2 /* CourseSearchViewController.swift */; };
+		03F3447D1FD8F564002CCA03 /* WatCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F3447A1FD8F564002CCA03 /* WatCardViewController.swift */; };
+		03F3447E1FD8F564002CCA03 /* advisroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F3447B1FD8F564002CCA03 /* advisroViewController.swift */; };
+		03F344801FD8F598002CCA03 /* sectionClassSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F3447F1FD8F598002CCA03 /* sectionClassSimple.swift */; };
 		4C4EA6611F64712D007A118E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EA6601F64712D007A118E /* AppDelegate.swift */; };
 		4C4EA6631F64712D007A118E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EA6621F64712D007A118E /* MainViewController.swift */; };
 		4C4EA6661F64712D007A118E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4EA6641F64712D007A118E /* Main.storyboard */; };
@@ -97,6 +100,9 @@
 		03E6E21F1FBD2C2D00C71726 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		03E6E2201FBD2C2D00C71726 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		03F185BC1F85DA7100F9D4D2 /* CourseSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseSearchViewController.swift; sourceTree = "<group>"; };
+		03F3447A1FD8F564002CCA03 /* WatCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WatCardViewController.swift; path = "uw-app/WatCardViewController.swift"; sourceTree = SOURCE_ROOT; };
+		03F3447B1FD8F564002CCA03 /* advisroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = advisroViewController.swift; path = "uw-app/advisroViewController.swift"; sourceTree = SOURCE_ROOT; };
+		03F3447F1FD8F598002CCA03 /* sectionClassSimple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sectionClassSimple.swift; sourceTree = "<group>"; };
 		4C4EA65D1F64712D007A118E /* uw-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "uw-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4EA6601F64712D007A118E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4EA6621F64712D007A118E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				03C19D491FD118F300F5ABF8 /* SectionClass.swift */,
+				03F3447F1FD8F598002CCA03 /* sectionClassSimple.swift */,
 				0378E64F1FD65AE200A12E74 /* Utilities.swift */,
 				0378E6511FD6761B00A12E74 /* Course Search */,
 				0378E6521FD6763900A12E74 /* Course Requirements */,
@@ -129,6 +136,8 @@
 				4C4EA6621F64712D007A118E /* MainViewController.swift */,
 				03C19D401FCFE7BC00F5ABF8 /* EmailViewController.swift */,
 				03C19D411FCFE7BC00F5ABF8 /* LearnViewController.swift */,
+				03F3447B1FD8F564002CCA03 /* advisroViewController.swift */,
+				03F3447A1FD8F564002CCA03 /* WatCardViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -347,12 +356,14 @@
 				4C4EA6631F64712D007A118E /* MainViewController.swift in Sources */,
 				0378E6501FD65AE200A12E74 /* Utilities.swift in Sources */,
 				03C19D481FD0F8FB00F5ABF8 /* SectionDetailsViewController.swift in Sources */,
+				03F344801FD8F598002CCA03 /* sectionClassSimple.swift in Sources */,
 				03E6E2041FBBF93B00C71726 /* CourseDetailsViewController.swift in Sources */,
 				03E6E22E1FBD2C2D00C71726 /* WatSwift.News.swift in Sources */,
 				03E6E2301FBD2C2D00C71726 /* WatSwift.Parking.swift in Sources */,
 				03E6E2281FBD2C2D00C71726 /* WatSwift.Codes.swift in Sources */,
 				03C19D461FCFE92300F5ABF8 /* SelectOptionViewController.swift in Sources */,
 				03E6E2231FBD2C2D00C71726 /* WatBase.swift in Sources */,
+				03F3447E1FD8F564002CCA03 /* advisroViewController.swift in Sources */,
 				03E6E2341FBD2C2D00C71726 /* WatSwift.Services.swift in Sources */,
 				03E6E22A1FBD2C2D00C71726 /* WatSwift.Directory.swift in Sources */,
 				03E6E2311FBD2C2D00C71726 /* WatSwift.PointsOfInterest.swift in Sources */,
@@ -363,6 +374,7 @@
 				03BB20891FD4EE8800A5010C /* CustomCell.swift in Sources */,
 				03E6E2361FBD2C2D00C71726 /* WatSwift.Transit.swift in Sources */,
 				03E6E22D1FBD2C2D00C71726 /* WatSwift.FoodServices.swift in Sources */,
+				03F3447D1FD8F564002CCA03 /* WatCardViewController.swift in Sources */,
 				03E6E22F1FBD2C2D00C71726 /* WatSwift.Opportunities.swift in Sources */,
 				03E6E2291FBD2C2D00C71726 /* WatSwift.Courses.swift in Sources */,
 				03BB20881FD4EE8800A5010C /* CourseScheduleViewController.swift in Sources */,

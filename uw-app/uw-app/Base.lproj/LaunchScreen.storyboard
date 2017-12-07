@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,23 +28,65 @@
                                 <color key="textColor" red="0.91038483381271362" green="0.86032605171203613" blue="0.34482619166374207" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yMg-bI-wym">
-                                <rect key="frame" x="9" y="519" width="357" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zGY-bg-z9N" userLabel="Developers">
+                                <rect key="frame" x="50" y="339" width="275" height="178"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed By" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8g-BI-Vai" userLabel="Developed By">
+                                        <rect key="frame" x="80" y="0.0" width="115.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Fkv-uM-lkk">
+                                        <rect key="frame" x="0.0" y="30.5" width="275" height="147.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WQ4-r1-7DG">
+                                                <rect key="frame" x="0.0" y="0.0" width="123" height="147.5"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guyu" translatesAutoresizingMaskIntoConstraints="NO" id="9fd-mp-Fw1" userLabel="Guyu View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="123" height="123.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="9fd-mp-Fw1" secondAttribute="height" multiplier="200:201" id="DGI-xx-m21"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guyu Li" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2j-4j-bT4" userLabel="Guyu Li">
+                                                        <rect key="frame" x="0.0" y="123.5" width="123" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SJn-A9-Xyd">
+                                                <rect key="frame" x="153" y="0.0" width="122" height="147.5"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zepeng" translatesAutoresizingMaskIntoConstraints="NO" id="NKD-tQ-JUi" userLabel="Zepeng View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="122" height="123.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="NKD-tQ-JUi" secondAttribute="height" multiplier="200:201" id="InM-oK-nNz"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paul An" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCl-PB-5yx" userLabel="Paul An">
+                                                        <rect key="frame" x="0.0" y="123.5" width="122" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Cl-nf-zNu">
-                                <rect key="frame" x="120" y="375" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8ng-kk-9NZ" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="82" id="2gt-VK-S23"/>
                             <constraint firstItem="8ng-kk-9NZ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="4gr-pi-gO1"/>
                             <constraint firstAttribute="trailing" secondItem="8ng-kk-9NZ" secondAttribute="trailing" id="74J-rU-bPK"/>
+                            <constraint firstAttribute="trailing" secondItem="zGY-bg-z9N" secondAttribute="trailing" constant="50" id="N0h-TP-5aX"/>
+                            <constraint firstItem="zGY-bg-z9N" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="50" id="g7U-fc-ZL2"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="zGY-bg-z9N" secondAttribute="bottom" constant="150" id="hfm-Yb-axM"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -52,4 +95,8 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="guyu" width="200" height="201"/>
+        <image name="zepeng" width="186" height="186"/>
+    </resources>
 </document>
