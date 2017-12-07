@@ -8,7 +8,7 @@
 
 import UIKit
 
-class advisroViewController: UIViewController {
+class AdvisroViewController: UIViewController {
 
     @IBOutlet weak var advisorWebView: UIWebView!
     override func viewDidLoad() {
