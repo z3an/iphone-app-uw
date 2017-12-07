@@ -1246,12 +1246,12 @@
         <!--Games-->
         <scene sceneID="F8l-Ei-MsN">
             <objects>
-                <viewController id="Ae2-it-Nux" sceneMemberID="viewController">
+                <viewController id="Ae2-it-Nux" customClass="GameViewController" customModule="uw_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wIr-eS-LG6"/>
                         <viewControllerLayoutGuide type="bottom" id="uep-c8-jqD"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4hq-7M-acr">
+                    <view key="view" contentMode="scaleToFill" id="4hq-7M-acr" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.26052902919999998" green="0.26052902919999998" blue="0.26052902919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
