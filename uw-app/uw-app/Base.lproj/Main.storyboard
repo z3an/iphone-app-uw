@@ -1178,7 +1178,7 @@
         <!--WatCard-->
         <scene sceneID="ZY8-oE-wgl">
             <objects>
-                <viewController id="1Tn-cU-tWF" sceneMemberID="viewController">
+                <viewController id="1Tn-cU-tWF" customClass="WatCardViewController" customModule="uw_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yEx-zl-wju"/>
                         <viewControllerLayoutGuide type="bottom" id="8XT-gd-aK5"/>
@@ -1186,18 +1186,28 @@
                     <view key="view" contentMode="scaleToFill" id="ahd-cY-sfU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3B1-u0-e7R">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" red="0.26052902919999998" green="0.26052902919999998" blue="0.26052902919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="WatCard" id="jQs-mm-SMO"/>
+                    <connections>
+                        <outlet property="watCardWebView" destination="3B1-u0-e7R" id="hVd-e0-Ipj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bdh-A6-QFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4796" y="1585"/>
+            <point key="canvasLocation" x="4795.652173913044" y="1584.7826086956522"/>
         </scene>
         <!--Library-->
         <scene sceneID="WXd-Dc-ao9">
             <objects>
-                <viewController id="S4d-Dq-zJt" sceneMemberID="viewController">
+                <viewController id="S4d-Dq-zJt" customClass="LibraryViewController" customModule="uw_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AGP-97-G2W"/>
                         <viewControllerLayoutGuide type="bottom" id="fYB-Wo-Zzh"/>
@@ -1205,13 +1215,28 @@
                     <view key="view" contentMode="scaleToFill" id="EQa-0I-KLt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sqh-Gq-uv4">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" red="0.26052902919999998" green="0.26052902919999998" blue="0.26052902919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fYB-Wo-Zzh" firstAttribute="top" secondItem="sqh-Gq-uv4" secondAttribute="bottom" id="360-4q-EvR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sqh-Gq-uv4" secondAttribute="trailing" id="9Xi-R0-Hmf"/>
+                            <constraint firstItem="sqh-Gq-uv4" firstAttribute="leading" secondItem="EQa-0I-KLt" secondAttribute="leadingMargin" id="Qc8-2D-Ecp"/>
+                            <constraint firstItem="sqh-Gq-uv4" firstAttribute="top" secondItem="AGP-97-G2W" secondAttribute="bottom" id="xwI-M4-Hhv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Library" id="WyG-4A-ALR"/>
+                    <connections>
+                        <outlet property="libraryWebView" destination="sqh-Gq-uv4" id="EZ9-q2-3Kz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tcv-sp-w5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3787" y="1585"/>
+            <point key="canvasLocation" x="3786.9565217391309" y="1584.7826086956522"/>
         </scene>
         <!--Games-->
         <scene sceneID="F8l-Ei-MsN">
@@ -1235,7 +1260,7 @@
         <!--Advisor-->
         <scene sceneID="dLh-u0-fwT">
             <objects>
-                <viewController id="x34-9z-WkV" sceneMemberID="viewController">
+                <viewController id="x34-9z-WkV" customClass="advisroViewController" customModule="uw_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="j7W-yo-0gv"/>
                         <viewControllerLayoutGuide type="bottom" id="jGG-DQ-bmh"/>
@@ -1243,13 +1268,23 @@
                     <view key="view" contentMode="scaleToFill" id="g5a-kM-pMF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M7t-ri-kBK">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" red="0.26052902919999998" green="0.26052902919999998" blue="0.26052902919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Advisor" id="Tzg-zf-BTI"/>
+                    <connections>
+                        <outlet property="advisorWebView" destination="M7t-ri-kBK" id="5jG-hF-I8b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8vG-30-B3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3787" y="2325"/>
+            <point key="canvasLocation" x="3786.9565217391309" y="2325"/>
         </scene>
         <!--Email-->
         <scene sceneID="ic8-r5-k2E">
