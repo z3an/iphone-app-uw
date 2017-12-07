@@ -80,7 +80,7 @@ class SectionDetailsViewController: UIViewController {
             section.instructor = CourseDetailsViewController.selectedInstructor
             section.location = CourseDetailsViewController.selectedLocation
             //check time conflict
-            var bool = Utilities.sectionTimeConflict(section: section)
+            let bool = Utilities.sectionTimeConflict(section: section)
             print(bool)
             ViewController.addedSection.append(section)
             addScheduleButton.setTitle("Remove from Your Schedule", for: .normal)

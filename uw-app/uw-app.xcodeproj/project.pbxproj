@@ -52,6 +52,10 @@
 		03F3447E1FD8F564002CCA03 /* AdvisroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F3447B1FD8F564002CCA03 /* AdvisroViewController.swift */; };
 		03F344801FD8F598002CCA03 /* sectionClassSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F3447F1FD8F598002CCA03 /* sectionClassSimple.swift */; };
 		03F344821FD8FFC5002CCA03 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F344811FD8FFC5002CCA03 /* LibraryViewController.swift */; };
+		03F344871FD90C8E002CCA03 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 03F344831FD90C8E002CCA03 /* Actions.sks */; };
+		03F344881FD90C8E002CCA03 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F344841FD90C8E002CCA03 /* GameViewController.swift */; };
+		03F344891FD90C8E002CCA03 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 03F344851FD90C8E002CCA03 /* GameScene.sks */; };
+		03F3448A1FD90C8E002CCA03 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F344861FD90C8E002CCA03 /* GameScene.swift */; };
 		4C4EA6611F64712D007A118E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EA6601F64712D007A118E /* AppDelegate.swift */; };
 		4C4EA6631F64712D007A118E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EA6621F64712D007A118E /* MainViewController.swift */; };
 		4C4EA6661F64712D007A118E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4EA6641F64712D007A118E /* Main.storyboard */; };
@@ -105,6 +109,10 @@
 		03F3447B1FD8F564002CCA03 /* AdvisroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdvisroViewController.swift; path = "uw-app/AdvisroViewController.swift"; sourceTree = SOURCE_ROOT; };
 		03F3447F1FD8F598002CCA03 /* sectionClassSimple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sectionClassSimple.swift; sourceTree = "<group>"; };
 		03F344811FD8FFC5002CCA03 /* LibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LibraryViewController.swift; path = "uw-app/LibraryViewController.swift"; sourceTree = SOURCE_ROOT; };
+		03F344831FD90C8E002CCA03 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		03F344841FD90C8E002CCA03 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		03F344851FD90C8E002CCA03 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		03F344861FD90C8E002CCA03 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		4C4EA65D1F64712D007A118E /* uw-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "uw-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4EA6601F64712D007A118E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4EA6621F64712D007A118E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +143,7 @@
 				0378E6511FD6761B00A12E74 /* Course Search */,
 				0378E6521FD6763900A12E74 /* Course Requirements */,
 				0378E6531FD6766100A12E74 /* Course Schedule */,
+				03F3448B1FD90C94002CCA03 /* Game */,
 				4C4EA6621F64712D007A118E /* MainViewController.swift */,
 				03F344811FD8FFC5002CCA03 /* LibraryViewController.swift */,
 				03C19D401FCFE7BC00F5ABF8 /* EmailViewController.swift */,
@@ -224,6 +233,17 @@
 			);
 			name = WatSwift;
 			path = ../WatSwift/WatSwift;
+			sourceTree = "<group>";
+		};
+		03F3448B1FD90C94002CCA03 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				03F344831FD90C8E002CCA03 /* Actions.sks */,
+				03F344851FD90C8E002CCA03 /* GameScene.sks */,
+				03F344861FD90C8E002CCA03 /* GameScene.swift */,
+				03F344841FD90C8E002CCA03 /* GameViewController.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 		4C4EA6541F64712C007A118E = {
@@ -319,8 +339,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C4EA66B1F64712D007A118E /* LaunchScreen.storyboard in Resources */,
+				03F344891FD90C8E002CCA03 /* GameScene.sks in Resources */,
 				4C4EA6681F64712D007A118E /* Assets.xcassets in Resources */,
 				4C4EA6661F64712D007A118E /* Main.storyboard in Resources */,
+				03F344871FD90C8E002CCA03 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,12 +388,14 @@
 				03E6E2301FBD2C2D00C71726 /* WatSwift.Parking.swift in Sources */,
 				03E6E2281FBD2C2D00C71726 /* WatSwift.Codes.swift in Sources */,
 				03C19D461FCFE92300F5ABF8 /* SelectOptionViewController.swift in Sources */,
+				03F3448A1FD90C8E002CCA03 /* GameScene.swift in Sources */,
 				03E6E2231FBD2C2D00C71726 /* WatBase.swift in Sources */,
 				03F3447E1FD8F564002CCA03 /* AdvisroViewController.swift in Sources */,
 				03E6E2341FBD2C2D00C71726 /* WatSwift.Services.swift in Sources */,
 				03E6E22A1FBD2C2D00C71726 /* WatSwift.Directory.swift in Sources */,
 				03E6E2311FBD2C2D00C71726 /* WatSwift.PointsOfInterest.swift in Sources */,
 				03E6E2271FBD2C2D00C71726 /* WatSwift.Buildings.swift in Sources */,
+				03F344881FD90C8E002CCA03 /* GameViewController.swift in Sources */,
 				03E6E2381FBD2C2D00C71726 /* Response.swift in Sources */,
 				03E6E2261FBD2C2D00C71726 /* WatSwift.Blogs.swift in Sources */,
 				03E6E2391FBD2C2D00C71726 /* JSON.swift in Sources */,
