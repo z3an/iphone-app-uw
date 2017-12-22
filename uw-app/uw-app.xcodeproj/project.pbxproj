@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		035DB9F61FEDA8FE00AA49CA /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035DB9F21FEDA8FD00AA49CA /* GameScene.swift */; };
+		035DB9F71FEDA8FE00AA49CA /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 035DB9F31FEDA8FE00AA49CA /* Actions.sks */; };
+		035DB9F81FEDA8FE00AA49CA /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 035DB9F41FEDA8FE00AA49CA /* GameScene.sks */; };
+		035DB9F91FEDA8FE00AA49CA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035DB9F51FEDA8FE00AA49CA /* GameViewController.swift */; };
 		037083031FCF720F0064F7B2 /* SelectFacultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037083021FCF720F0064F7B2 /* SelectFacultyViewController.swift */; };
 		037083051FCF87AD0064F7B2 /* AcademicRequirementsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037083041FCF87AD0064F7B2 /* AcademicRequirementsData.swift */; };
 		037083071FCF9CC70064F7B2 /* SelectDepartmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037083061FCF9CC70064F7B2 /* SelectDepartmentViewController.swift */; };
@@ -52,10 +56,6 @@
 		03F3447E1FD8F564002CCA03 /* AdvisroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F3447B1FD8F564002CCA03 /* AdvisroViewController.swift */; };
 		03F344801FD8F598002CCA03 /* sectionClassSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F3447F1FD8F598002CCA03 /* sectionClassSimple.swift */; };
 		03F344821FD8FFC5002CCA03 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F344811FD8FFC5002CCA03 /* LibraryViewController.swift */; };
-		03F344871FD90C8E002CCA03 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 03F344831FD90C8E002CCA03 /* Actions.sks */; };
-		03F344881FD90C8E002CCA03 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F344841FD90C8E002CCA03 /* GameViewController.swift */; };
-		03F344891FD90C8E002CCA03 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 03F344851FD90C8E002CCA03 /* GameScene.sks */; };
-		03F3448A1FD90C8E002CCA03 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F344861FD90C8E002CCA03 /* GameScene.swift */; };
 		4C4EA6611F64712D007A118E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EA6601F64712D007A118E /* AppDelegate.swift */; };
 		4C4EA6631F64712D007A118E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4EA6621F64712D007A118E /* MainViewController.swift */; };
 		4C4EA6661F64712D007A118E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4EA6641F64712D007A118E /* Main.storyboard */; };
@@ -64,6 +64,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		035DB9F21FEDA8FD00AA49CA /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		035DB9F31FEDA8FE00AA49CA /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		035DB9F41FEDA8FE00AA49CA /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		035DB9F51FEDA8FE00AA49CA /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		037083021FCF720F0064F7B2 /* SelectFacultyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectFacultyViewController.swift; sourceTree = "<group>"; };
 		037083041FCF87AD0064F7B2 /* AcademicRequirementsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicRequirementsData.swift; sourceTree = "<group>"; };
 		037083061FCF9CC70064F7B2 /* SelectDepartmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDepartmentViewController.swift; sourceTree = "<group>"; };
@@ -109,10 +113,6 @@
 		03F3447B1FD8F564002CCA03 /* AdvisroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdvisroViewController.swift; path = "uw-app/AdvisroViewController.swift"; sourceTree = SOURCE_ROOT; };
 		03F3447F1FD8F598002CCA03 /* sectionClassSimple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sectionClassSimple.swift; sourceTree = "<group>"; };
 		03F344811FD8FFC5002CCA03 /* LibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LibraryViewController.swift; path = "uw-app/LibraryViewController.swift"; sourceTree = SOURCE_ROOT; };
-		03F344831FD90C8E002CCA03 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		03F344841FD90C8E002CCA03 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		03F344851FD90C8E002CCA03 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		03F344861FD90C8E002CCA03 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		4C4EA65D1F64712D007A118E /* uw-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "uw-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4EA6601F64712D007A118E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C4EA6621F64712D007A118E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -238,10 +238,10 @@
 		03F3448B1FD90C94002CCA03 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				03F344831FD90C8E002CCA03 /* Actions.sks */,
-				03F344851FD90C8E002CCA03 /* GameScene.sks */,
-				03F344861FD90C8E002CCA03 /* GameScene.swift */,
-				03F344841FD90C8E002CCA03 /* GameViewController.swift */,
+				035DB9F31FEDA8FE00AA49CA /* Actions.sks */,
+				035DB9F41FEDA8FE00AA49CA /* GameScene.sks */,
+				035DB9F21FEDA8FD00AA49CA /* GameScene.swift */,
+				035DB9F51FEDA8FE00AA49CA /* GameViewController.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -310,8 +310,9 @@
 				TargetAttributes = {
 					4C4EA65C1F64712D007A118E = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 7QPSN8NHYY;
 						LastSwiftMigration = 0910;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -339,10 +340,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C4EA66B1F64712D007A118E /* LaunchScreen.storyboard in Resources */,
-				03F344891FD90C8E002CCA03 /* GameScene.sks in Resources */,
+				035DB9F81FEDA8FE00AA49CA /* GameScene.sks in Resources */,
 				4C4EA6681F64712D007A118E /* Assets.xcassets in Resources */,
 				4C4EA6661F64712D007A118E /* Main.storyboard in Resources */,
-				03F344871FD90C8E002CCA03 /* Actions.sks in Resources */,
+				035DB9F71FEDA8FE00AA49CA /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,18 +389,17 @@
 				03E6E2301FBD2C2D00C71726 /* WatSwift.Parking.swift in Sources */,
 				03E6E2281FBD2C2D00C71726 /* WatSwift.Codes.swift in Sources */,
 				03C19D461FCFE92300F5ABF8 /* SelectOptionViewController.swift in Sources */,
-				03F3448A1FD90C8E002CCA03 /* GameScene.swift in Sources */,
 				03E6E2231FBD2C2D00C71726 /* WatBase.swift in Sources */,
 				03F3447E1FD8F564002CCA03 /* AdvisroViewController.swift in Sources */,
 				03E6E2341FBD2C2D00C71726 /* WatSwift.Services.swift in Sources */,
 				03E6E22A1FBD2C2D00C71726 /* WatSwift.Directory.swift in Sources */,
 				03E6E2311FBD2C2D00C71726 /* WatSwift.PointsOfInterest.swift in Sources */,
 				03E6E2271FBD2C2D00C71726 /* WatSwift.Buildings.swift in Sources */,
-				03F344881FD90C8E002CCA03 /* GameViewController.swift in Sources */,
 				03E6E2381FBD2C2D00C71726 /* Response.swift in Sources */,
 				03E6E2261FBD2C2D00C71726 /* WatSwift.Blogs.swift in Sources */,
 				03E6E2391FBD2C2D00C71726 /* JSON.swift in Sources */,
 				03BB20891FD4EE8800A5010C /* CustomCell.swift in Sources */,
+				035DB9F91FEDA8FE00AA49CA /* GameViewController.swift in Sources */,
 				03E6E2361FBD2C2D00C71726 /* WatSwift.Transit.swift in Sources */,
 				03E6E22D1FBD2C2D00C71726 /* WatSwift.FoodServices.swift in Sources */,
 				03F3447D1FD8F564002CCA03 /* WatCardViewController.swift in Sources */,
@@ -417,6 +417,7 @@
 				4C4EA6611F64712D007A118E /* AppDelegate.swift in Sources */,
 				037083051FCF87AD0064F7B2 /* AcademicRequirementsData.swift in Sources */,
 				03C19D431FCFE7BC00F5ABF8 /* EmailViewController.swift in Sources */,
+				035DB9F61FEDA8FE00AA49CA /* GameScene.swift in Sources */,
 				03E6E2241FBD2C2D00C71726 /* WatSwift.API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,14 +541,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7QPSN8NHYY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "uw-app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.guyuli.uw-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "uw-app.guyu";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -559,14 +563,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7QPSN8NHYY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "uw-app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.guyuli.uw-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "uw-app.guyu";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
