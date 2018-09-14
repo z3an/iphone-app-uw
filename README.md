@@ -2,4 +2,4 @@
 
 Developers: Guyu Li and Zepeng An
 
-![alt text](main.jpg) (loading.jpg)
+![alt text](main.jpg, loading.jpg)
