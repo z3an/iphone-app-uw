@@ -81,10 +81,12 @@ class SectionDetailsViewController: UIViewController {
             section.location = CourseDetailsViewController.selectedLocation
             //check time conflict
             let bool = Utilities.sectionTimeConflict(section: section)
-            print(bool)
-            ViewController.addedSection.append(section)
-            addScheduleButton.setTitle("Remove from Your Schedule", for: .normal)
-            ifAdded = true
+            //print(bool)
+            if !bool {
+                ViewController.addedSection.append(section)
+                addScheduleButton.setTitle("Remove from Your Schedule", for: .normal)
+                ifAdded = true
+            }
         }
         else {
             addScheduleButton.setTitle("Add to Your Schedule", for: .normal)
